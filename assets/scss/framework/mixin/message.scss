@@ -10,13 +10,14 @@
 
 
 /**
- * @param  {Color}  $color: $color--base
+ * @param  {Color}  $color: var(--color--base)
  */
-@mixin messageVariant($color: $color--base)
+@mixin messageVariant($color: var(--color--base))
 {
   border-color: $color;
   background-color: rgba($color, 0.8);
-  color: darken($color, 70%);
+  // color: darken($color, 70%);
+  color: $color;
 }
 
 /* <> */

@@ -1,5 +1,5 @@
 /**
- * Global: Variables
+ * Variables
  *
  * @category   Stylesheet
  * @package    JDMLABS
@@ -9,141 +9,123 @@
  */
 
 
-// $rtl: false !default;
-// $container--max: 1400px !default;
-// $website-max: 2200px !default;
+:root {
+
+  --rtl: false;
+  --container--max: 1400px;
+  --website-max: 2200px;
 
 
-/**
- * Fonts
- * --------------------------------------------------------------------------- *
- */
+  /**
+   * Fonts
+   * ------------------------------------------------------------------------- *
+   */
 
-// $font-family--base: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto !default;
-// $font-family--accent: "Nexa Rust", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto !default;
-// $font-family--fallback: "Helvetica Neue", Helvetica, Sans-Serif !default;
-// $font-family: $font-family--base, $font-family--fallback !default;
+  --font-family--base: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto;
+  --font-family--accent: "Nexa Rust", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto;
+  --font-family--fallback: "Helvetica Neue", Helvetica, Sans-Serif;
+  --font-family: var(--font-family--base), var(--font-family--fallback);
 
-// $font-family--cjk-zh-hans: $font-family--base, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", $font-family--fallback !default;
-// $font-family--cjk-zh-hant: $font-family--base, "PingFang TC", "Hiragino Sans CNS", "Microsoft JhengHei", $font-family--fallback !default;
-// $font-family--cjk-jp: $font-family--base, "Hiragino Sans", "Hiragino Kaku Gothic Pro", "Yu Gothic", YuGothic, Meiryo, $font-family--fallback !default;
-// $font-family--cjk-ko: $font-family--base, "Malgun Gothic", $font-family--fallback !default;
+  --font-family--cjk-zh-hans: var(--font-family--base), "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", var(--font-family--fallback);
+  --font-family--cjk-zh-hant: var(--font-family--base), "PingFang TC", "Hiragino Sans CNS", "Microsoft JhengHei", var(--font-family--fallback);
+  --font-family--cjk-jp: var(--font-family--base), "Hiragino Sans", "Hiragino Kaku Gothic Pro", "Yu Gothic", YuGothic, Meiryo, var(--font-family--fallback);
+  --font-family--cjk-ko: var(--font-family--base), "Malgun Gothic", var(--font-family--fallback);
 
-/** -- Sizes */
+  /** -- Sizes */
 
-// $size--font-base: 16px !default;
-
-
-
-
-/**
- * Colors
- * --------------------------------------------------------------------------- *
- */
-
-/** -- Foreground */
-
-// $color--base: #303742 !default;
-// $color--base-primary: lighten($color--base, 5%) !default;
-
-// $color--accent-primary: #007c3f !default;
-// $color--accent-primary-dark: #487528 !default;
-// $color--accent-primary-medium: #7aa225 !default;
-// $color--accent-primary-light: #86bc25 !default;
-
-// $color--accent-secondary: #005a98 !default;
-// $color--accent-secondary-dark: darken($color--accent-secondary, 3%) !default;
-// $color--accent-secondary-light: #019fda !default;
-// $color--accent-secondary-ultralight: #e1f3fa !default;
-
-// $color--accent-tertiary: #f7a612 !default;
-// $color--accent-tertiary-dark: #e57526 !default;
-
-// $color--accent-operator: #816c44 !default;
-
-// $color--anchor: $color--accent-secondary !default;
-// $color--anchor-dark: darken($color--anchor, 10%) !default;
-// $color--anchor-light: lighten($color--anchor, 10%) !default;
-
-// $color--gray: #a6a6a6 !default;
-// $color--gray-dark: #5a5a5a !default;
-// $color--gray-light: #d9d9d9 !default;
-// $color--gray-ultralight: #f8f8f8 !default;
-
-// $color--border: lighten($color--base, 65%) !default;
-// $color--border-dark: darken($color--border, 10%) !default;
-// $color--border-light: lighten($color--border, 8%) !default;
-
-// $color--status-ok: #b7ffc0 !default;
-// $color--status-warning: #ffe7aa !default;
-// $color--status-error: #ffcac8 !default;
-
-// $color--hero-edit-btn: rgba(#c0ff00, 0.7);
-
-
-/** -- Background */
-
-// $background--primary: lighten($color--base, 75%) !default;
-// $background--primary-dark: darken($background--primary, 3%) !default;
-// $background--primary-light: #fff !default;
-
-// $background--highlight: #fffab6 !default;
-
-
-/** -- Specifics */
-
-// $color--operator-accent: #797466 !default;
-// $color--operator-accent-dark: #816c44 !default;
-
-// $color--social-facebook: #375f90;
-// $color--social-globe: $color--accent-primary;
-// $color--social-instagram: #99239f;
-// $color--social-linkedin: #0077b5;
-// $color--social-tripadvisor: #00af87;
-// $color--social-twitter: #30a9ef;
-// $color--social-vimeo: #00adef;
-// $color--social-wechat: #09bb07;
-// $color--social-weibo: #e6162d;
-// $color--social-youtube: #f02b26;
+  --size--font-base: 16px;
 
 
 
 
-/**
- * Sizings
- * --------------------------------------------------------------------------- *
- */
+  /**
+   * Colors
+   * ------------------------------------------------------------------------- *
+   */
 
-// $padding-x: 0.4rem !default;
-// $padding-x-sm: 0.4rem * 0.75 !default;
-// $padding-x-lg: 0.4rem * 1.5 !default;
-// $padding-y: (1.8rem - 1.5rem) / 2 - 0.05rem !default;
-// $padding-y-sm: (1.4rem - 1.5rem) / 2 - 0.05rem !default;
-// $padding-y-lg: (2rem - 1.5rem) / 2 - 0.05rem !default;
+  /** -- Foreground */
 
-// $width-xs: 180px !default;
-// $width-sm: 320px !default;
-// $width-md: 640px !default;
-// $width-lg: 960px !default;
-// $width-xl: 1280px !default;
+  --color--base: #303742;
+  --color--base-primary: lighten(var(--color--base,) 5%);
+
+  --color--accent-primary: #007c3f;
+  --color--accent-primary-dark: #487528;
+  --color--accent-primary-medium: #7aa225;
+  --color--accent-primary-light: #86bc25;
+
+  --color--accent-secondary: #005a98;
+  --color--accent-secondary-dark: darken(var(--color--accent-secondary), 3%);
+  --color--accent-secondary-light: #019fda;
+  --color--accent-secondary-ultralight: #e1f3fa;
+
+  --color--accent-tertiary: #f7a612;
+  --color--accent-tertiary-dark: #e57526;
+
+  --color--anchor: var(--color--accent-secondary);
+  --color--anchor-dark: darken(var(--color--anchor), 10%);
+  --color--anchor-light: lighten(var(--color--anchor), 10%);
+
+  --color--gray: #a6a6a6;
+  --color--gray-dark: #5a5a5a;
+  --color--gray-light: #d9d9d9;
+  --color--gray-ultralight: #f8f8f8;
+
+  --color--border: lighten(var(--color--base), 65%);
+  --color--border-dark: darken(var(--color--border), 10%);
+  --color--border-light: lighten(var(--color--border), 8%);
+
+  --color--status-ok: #b7ffc0;
+  --color--status-warning: #ffe7aa;
+  --color--status-error: #ffcac8;
+
+
+  /** -- Background */
+
+  --background--primary: lighten(var(--color--base), 75%);
+  --background--primary-dark: darken(var(--background--primary), 3%);
+  --background--primary-light: #fff;
+
+  --background--highlight: #fffab6;
 
 
 
 
-/**
- * Debuggin'
- * --------------------------------------------------------------------------- *
- */
+  /**
+   * Sizings
+   * ------------------------------------------------------------------------- *
+   */
 
-// $debug--blue:   rgba(#006cff, 0.2) !default;
-// $debug--green:  rgba(#14ff00, 0.2) !default;
-// $debug--lime:   rgba(#c0ff00, 0.4) !default;
-// $debug--orange: rgba(#ff1a00, 0.2) !default;
-// $debug--pink:   rgba(#ff00c9, 0.2) !default;
-// $debug--purple: rgba(#ab00ff, 0.2) !default;
-// $debug--red:    rgba(#ffcbcb, 0.4) !default;
-// $debug--teal:   rgba(#00ffff, 0.2) !default;
-// $debug--yellow: rgba(#faffcb, 0.6) !default;
+  --padding-x: 0.4rem;
+  --padding-x-sm: 0.4rem * 0.75;
+  --padding-x-lg: 0.4rem * 1.5;
+  --padding-y: (1.8rem - 1.5rem) / 2 - 0.05rem;
+  --padding-y-sm: (1.4rem - 1.5rem) / 2 - 0.05rem;
+  --padding-y-lg: (2rem - 1.5rem) / 2 - 0.05rem;
+
+  --width-xs: 180px;
+  --width-sm: 320px;
+  --width-md: 640px;
+  --width-lg: 960px;
+  --width-xl: 1280px;
+
+
+
+
+  /**
+   * Debuggin'
+   * ------------------------------------------------------------------------- *
+   */
+
+  --debug--blue:   rgba(#006cff, 0.2);
+  --debug--green:  rgba(#14ff00, 0.2);
+  --debug--lime:   rgba(#c0ff00, 0.4);
+  --debug--orange: rgba(#ff1a00, 0.2);
+  --debug--pink:   rgba(#ff00c9, 0.2);
+  --debug--purple: rgba(#ab00ff, 0.2);
+  --debug--red:    rgba(#ffcbcb, 0.4);
+  --debug--teal:   rgba(#00ffff, 0.2);
+  --debug--yellow: rgba(#faffcb, 0.6);
+}
 
 
 

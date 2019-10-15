@@ -15,7 +15,7 @@
   flex-wrap: wrap;
   align-items: center;
   margin: 0.2rem 0 (0.2rem - 0.05rem) 0;
-  border-bottom: 0.05rem solid $color--border;
+  border-bottom: 0.05rem solid var(--color--border);
 
   .tab-item {
     margin-top: 0;
@@ -35,14 +35,14 @@
 
       &:focus,
       &:hover {
-        color: $color--anchor;
+        color: var(--color--anchor);
       }
     }
 
     &.active a,
     a.active {
-      border-bottom-color: $color--accent-primary;
-      color: $color--anchor;
+      border-bottom-color: var(--color--accent-primary);
+      color: var(--color--anchor);
     }
 
     &.tab-action {
@@ -70,8 +70,7 @@
           top: 0.1rem;
           right: 0.1rem;
 
-          -webkit-transform: translate(0, 0);
-                  transform: translate(0, 0);
+          transform: translate(0, 0);
         }
       }
     }

@@ -1,5 +1,5 @@
 /**
- * Global: Animations
+ * Animations
  *
  * @category   Stylesheet
  * @package    JDMLABS
@@ -12,16 +12,6 @@
 /**
  * Fade In.
  */
-@-webkit-keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -36,25 +26,12 @@
 /**
  * Rotator.
  */
-@-webkit-keyframes rotator {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
 @keyframes rotator {
   0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
@@ -62,29 +39,14 @@
 /**
  * Slide Down.
  */
-@-webkit-keyframes slideDown {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(-1.6rem);
-            transform: translateY(-1.6rem);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-}
-
 @keyframes slideDown {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(-1.6rem);
-            transform: translateY(-1.6rem);
+    transform: translateY(-1.6rem);
   }
   100% {
     opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    transform: translateY(0);
   }
 }
 

@@ -1,5 +1,5 @@
 /**
- * Global: Fonts/Icon Fonts
+ * Fonts/Icon Fonts
  *
  * @category   Stylesheet
  * @package    JDMLABS
@@ -10,56 +10,39 @@
 
 
 /**
- * Google Font: Open Sans
+ * Google Font: Fira Sans
  *
- * @link  https://fonts.google.com/specimen/Open+Sans?selection.family=Open+Sans:400,600,700
- * @link  https://google-webfonts-helper.herokuapp.com/fonts/open-sans?subsets=latin,latin-ext
+ * @link  https://fonts.googleapis.com/css?family=Fira+Sans:400,700,900&display=swap
+ * @link  https://google-webfonts-helper.herokuapp.com/fonts/fira-sans?subsets=latin
  * =============================================================================
  */
 
-/* open-sans-regular - latin-ext_latin */
 @font-face {
-  font-family: "Open Sans";
+  font-family: "Fira Sans";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/open-sans/open-sans-v15-latin-ext_latin-regular.eot");
-  src: local("Open Sans Regular"),
-       local("OpenSans-Regular"),
-       url("../fonts/open-sans/open-sans-v15-latin-ext_latin-regular.eot#iefix") format("embedded-opentype"),
-       url("../fonts/open-sans/open-sans-v15-latin-ext_latin-regular.woff2") format("woff2"),
-       url("../fonts/open-sans/open-sans-v15-latin-ext_latin-regular.woff") format("woff"),
-       url('../fonts/open-sans/open-sans-v15-latin-ext_latin-regular.ttf') format("truetype");
+  src: local("Fira Sans Regular"), local("FiraSans-Regular"),
+       url("../fonts/fira-sans/fira-sans-v10-latin-regular.woff2") format("woff2"),
+       url("../fonts/fira-sans/fira-sans-v10-latin-regular.woff") format("woff");
 }
 
-/* open-sans-600 - latin-ext_latin */
 @font-face {
-  font-family: "Open Sans";
-  font-style: normal;
-  font-weight: 600;
-  src: url("../fonts/open-sans/open-sans-v15-latin-ext_latin-600.eot");
-  src: local("Open Sans SemiBold"),
-       local("OpenSans-SemiBold"),
-       url("../fonts/open-sans/open-sans-v15-latin-ext_latin-600.eot#iefix") format("embedded-opentype"),
-       url("../fonts/open-sans/open-sans-v15-latin-ext_latin-600.woff2") format("woff2"),
-       url("../fonts/open-sans/open-sans-v15-latin-ext_latin-600.woff") format("woff"),
-       url('../fonts/open-sans/open-sans-v15-latin-ext_latin-600.ttf') format("truetype");
-}
-
-/* open-sans-700 - latin-ext_latin */
-@font-face {
-  font-family: "Open Sans";
+  font-family: "Fira Sans";
   font-style: normal;
   font-weight: 700;
-  src: url("../fonts/open-sans/open-sans-v15-latin-ext_latin-700.eot");
-  src: local("Open Sans Bold"),
-       local("OpenSans-Bold"),
-       url("../fonts/open-sans/open-sans-v15-latin-ext_latin-700.eot#iefix") format("embedded-opentype"),
-       url("../fonts/open-sans/open-sans-v15-latin-ext_latin-700.woff2") format("woff2"),
-       url("../fonts/open-sans/open-sans-v15-latin-ext_latin-700.woff") format("woff"),
-       url('../fonts/open-sans/open-sans-v15-latin-ext_latin-700.ttf') format("truetype");
+  src: local("Fira Sans Bold"), local("FiraSans-Bold"),
+       url("../fonts/fira-sans/fira-sans-v10-latin-700.woff2") format("woff2"),
+       url("../fonts/fira-sans/fira-sans-v10-latin-700.woff") format("woff");
 }
 
-
+@font-face {
+  font-family: "Fira Sans";
+  font-style: normal;
+  font-weight: 900;
+  src: local("Fira Sans Black"), local("FiraSans-Black"),
+       url("../fonts/fira-sans/fira-sans-v10-latin-900.woff2") format("woff2"),
+       url("../fonts/fira-sans/fira-sans-v10-latin-900.woff") format("woff");
+}
 
 
 /**
@@ -73,11 +56,9 @@
   font-family: "fontello";
   font-style: normal;
   font-weight: normal;
-  src: url("../fonts/fontello/fontello.eot");
-  src: url("../fonts/fontello/fontello.eot#iefix") format("embedded-opentype"),
+  src: local("Fontello"),
        url("../fonts/fontello/fontello.woff2") format("woff2"),
-       url("../fonts/fontello/fontello.woff2") format("woff"),
-       url('../fonts/fontello/fontello.ttf') format("truetype");
+       url("../fonts/fontello/fontello.woff2") format("woff");
 }
 
 [class^="icon-"]::before,
@@ -107,7 +88,6 @@
 .icon-mail,
 .icon-phone {
   &::before {
-    // font-variant: super;
     vertical-align: super;
     font-size: 0.65rem;
     color: #444;

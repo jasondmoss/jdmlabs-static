@@ -68,12 +68,12 @@ module.exports = function (grunt) {
                 },
                 files: {
                     "../min/polyfills.js": [
-                        "../scripts/polyfills/*.js"
+                        "../scripts/polyfill/*.js"
                     ],
                     "../min/scripts.js": [
                         "../scripts/methods.js",
                         "../scripts/vendor/*.js",
-                        "../scripts/components/*.js",
+                        "../scripts/component/*.js",
                         "../scripts/site.js"
                     ]
                 }

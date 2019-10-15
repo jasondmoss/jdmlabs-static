@@ -10,8 +10,14 @@
 
 
 .label {
+  $color--primary-base: var(--color--base-primary);
+  $color--primary-dark: var(--background--primary-dark);
+  $color--status-ok: var(--color--status-ok);
+  $color--status-warning: var(--color--status-warning);
+  $color--status-error: var(--color--status-error);
+
   @include labelBase();
-  @include labelVariant(lighten($color--base-primary, 5%), $background--primary-dark);
+  @include labelVariant($color--primary-base, $color--primary-dark);
 
   display: inline-block;
 
@@ -51,11 +57,11 @@
    * ------------------------------------------------------------------------- *
    */
   &-primary {
-    @include labelVariant(#fff, $color--accent-primary);
+    @include labelVariant(#fff, $color--primary-base);
   }
 
   &-secondary {
-    @include labelVariant($color--accent-primary, $color--accent-secondary);
+    @include labelVariant($color--primary-base, $color--primary-dark);
   }
 
   &-success {
