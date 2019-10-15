@@ -1,2 +1,2 @@
-# jdmlabs
+# JdmLabs
 Personal website
