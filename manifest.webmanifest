@@ -1,0 +1,47 @@
+{
+  "dir": "ltr",
+  "lang": "en-CA",
+  "name": "JdmLabs: The Online Laboratory of Jason D. Moss",
+  "scope": "/",
+  "display": "browser",
+  "start_url": "/",
+  "short_name": "JdmLabs",
+  "theme_color": "transparent",
+  "description": "The homepage of Jason D. Moss, a PHP + Front-End Developer at JdmLabs, located in Canada. Compliant. Portable. Functional.",
+  "orientation": "any",
+  "background_color": "transparent",
+  "related_applications": [],
+  "prefer_related_applications": false,
+  "icons": [
+    {
+      "src": "https://www.jdmlabs.com/assets/images/ui/strata-16x16.png",
+      "type": "image/png",
+      "sizes": "16x16"
+    },
+    {
+      "src": "https://www.jdmlabs.com/assets/images/ui/strata-40x40.png",
+      "sizes": "40x40",
+      "type": "image/png"
+    },
+    {
+      "src": "https://www.jdmlabs.com/assets/images/ui/strata-57x57.png",
+      "sizes": "57x57",
+      "type": "image/png"
+    },
+    {
+      "src": "https://www.jdmlabs.com/assets/images/ui/strata-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "https://www.jdmlabs.com/assets/images/ui/strata-114x114.png",
+      "sizes": "114x114",
+      "type": "image/png"
+    },
+    {
+      "src": "https://www.jdmlabs.com/assets/images/ui/strata-256x256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    }
+  ]
+}

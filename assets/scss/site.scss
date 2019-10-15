@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+/**
+ * Base SCSS Styles
+ *
+ * @category   Stylesheet
+ * @package    JDMLABS
+ * @author     Jason D. Moss <jason@jdmlabs.com>
+ * @copyright  2005-2019 Jason D. Moss. All rights freely given.
+ * @link       https://www.jdmlabs.com/
+ */
+
+
+/**
+ * Global
+ * --------------------------------------------------------------------------- *
+ */
+@import "fonts";
+@import "variables";
+@import "animations";
+@import "mixins";
+
+
+/**
+ * Base Framework
+ * --------------------------------------------------------------------------- *
+ */
+@import "framework/framework-setup.scss";
+
+
+/**
+ * Vendors
+ * --------------------------------------------------------------------------- *
+ */
+@import "vendor/flickity.scss";
+@import "vendor/imageviewer.scss";
+
+
+/**
+ * Theme
+ * --------------------------------------------------------------------------- *
+ */
+@import "theme/theme-setup.scss";
+
+/* <> */

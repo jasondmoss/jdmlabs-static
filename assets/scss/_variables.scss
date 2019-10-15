@@ -1,0 +1,191 @@
+/**
+ * Global: Variables
+ *
+ * @category   Stylesheet
+ * @package    JDMLABS
+ * @author     Jason D. Moss <jason@jdmlabs.com>
+ * @copyright  2005-2019 Jason D. Moss. All rights freely given.
+ * @link       https://www.jdmlabs.com/
+ */
+
+
+// $rtl: false !default;
+// $container--max: 1400px !default;
+// $website-max: 2200px !default;
+
+
+/**
+ * Fonts
+ * --------------------------------------------------------------------------- *
+ */
+
+// $font-family--base: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto !default;
+// $font-family--accent: "Nexa Rust", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto !default;
+// $font-family--fallback: "Helvetica Neue", Helvetica, Sans-Serif !default;
+// $font-family: $font-family--base, $font-family--fallback !default;
+
+// $font-family--cjk-zh-hans: $font-family--base, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", $font-family--fallback !default;
+// $font-family--cjk-zh-hant: $font-family--base, "PingFang TC", "Hiragino Sans CNS", "Microsoft JhengHei", $font-family--fallback !default;
+// $font-family--cjk-jp: $font-family--base, "Hiragino Sans", "Hiragino Kaku Gothic Pro", "Yu Gothic", YuGothic, Meiryo, $font-family--fallback !default;
+// $font-family--cjk-ko: $font-family--base, "Malgun Gothic", $font-family--fallback !default;
+
+/** -- Sizes */
+
+// $size--font-base: 16px !default;
+
+
+
+
+/**
+ * Colors
+ * --------------------------------------------------------------------------- *
+ */
+
+/** -- Foreground */
+
+// $color--base: #303742 !default;
+// $color--base-primary: lighten($color--base, 5%) !default;
+
+// $color--accent-primary: #007c3f !default;
+// $color--accent-primary-dark: #487528 !default;
+// $color--accent-primary-medium: #7aa225 !default;
+// $color--accent-primary-light: #86bc25 !default;
+
+// $color--accent-secondary: #005a98 !default;
+// $color--accent-secondary-dark: darken($color--accent-secondary, 3%) !default;
+// $color--accent-secondary-light: #019fda !default;
+// $color--accent-secondary-ultralight: #e1f3fa !default;
+
+// $color--accent-tertiary: #f7a612 !default;
+// $color--accent-tertiary-dark: #e57526 !default;
+
+// $color--accent-operator: #816c44 !default;
+
+// $color--anchor: $color--accent-secondary !default;
+// $color--anchor-dark: darken($color--anchor, 10%) !default;
+// $color--anchor-light: lighten($color--anchor, 10%) !default;
+
+// $color--gray: #a6a6a6 !default;
+// $color--gray-dark: #5a5a5a !default;
+// $color--gray-light: #d9d9d9 !default;
+// $color--gray-ultralight: #f8f8f8 !default;
+
+// $color--border: lighten($color--base, 65%) !default;
+// $color--border-dark: darken($color--border, 10%) !default;
+// $color--border-light: lighten($color--border, 8%) !default;
+
+// $color--status-ok: #b7ffc0 !default;
+// $color--status-warning: #ffe7aa !default;
+// $color--status-error: #ffcac8 !default;
+
+// $color--hero-edit-btn: rgba(#c0ff00, 0.7);
+
+
+/** -- Background */
+
+// $background--primary: lighten($color--base, 75%) !default;
+// $background--primary-dark: darken($background--primary, 3%) !default;
+// $background--primary-light: #fff !default;
+
+// $background--highlight: #fffab6 !default;
+
+
+/** -- Specifics */
+
+// $color--operator-accent: #797466 !default;
+// $color--operator-accent-dark: #816c44 !default;
+
+// $color--social-facebook: #375f90;
+// $color--social-globe: $color--accent-primary;
+// $color--social-instagram: #99239f;
+// $color--social-linkedin: #0077b5;
+// $color--social-tripadvisor: #00af87;
+// $color--social-twitter: #30a9ef;
+// $color--social-vimeo: #00adef;
+// $color--social-wechat: #09bb07;
+// $color--social-weibo: #e6162d;
+// $color--social-youtube: #f02b26;
+
+
+
+
+/**
+ * Sizings
+ * --------------------------------------------------------------------------- *
+ */
+
+// $padding-x: 0.4rem !default;
+// $padding-x-sm: 0.4rem * 0.75 !default;
+// $padding-x-lg: 0.4rem * 1.5 !default;
+// $padding-y: (1.8rem - 1.5rem) / 2 - 0.05rem !default;
+// $padding-y-sm: (1.4rem - 1.5rem) / 2 - 0.05rem !default;
+// $padding-y-lg: (2rem - 1.5rem) / 2 - 0.05rem !default;
+
+// $width-xs: 180px !default;
+// $width-sm: 320px !default;
+// $width-md: 640px !default;
+// $width-lg: 960px !default;
+// $width-xl: 1280px !default;
+
+
+
+
+/**
+ * Debuggin'
+ * --------------------------------------------------------------------------- *
+ */
+
+// $debug--blue:   rgba(#006cff, 0.2) !default;
+// $debug--green:  rgba(#14ff00, 0.2) !default;
+// $debug--lime:   rgba(#c0ff00, 0.4) !default;
+// $debug--orange: rgba(#ff1a00, 0.2) !default;
+// $debug--pink:   rgba(#ff00c9, 0.2) !default;
+// $debug--purple: rgba(#ab00ff, 0.2) !default;
+// $debug--red:    rgba(#ffcbcb, 0.4) !default;
+// $debug--teal:   rgba(#00ffff, 0.2) !default;
+// $debug--yellow: rgba(#faffcb, 0.6) !default;
+
+
+
+
+/**
+ * Media Queries.
+ *
+ * ===========================================================================
+ */
+
+/** Min */
+
+// @media screen and (min-width: 320px) {}
+
+// @media screen and (min-width: 416px) {}
+
+// @media screen and (min-width: 480px) {}
+
+// @media screen and (min-width: 560px) {}
+
+// @media screen and (min-width: 640px) {}
+
+// @media screen and (min-width: 768px) {}
+
+// @media screen and (min-width: 896px) {}
+
+// @media screen and (min-width: 960px) {}
+
+// @media screen and (min-width: 1024px) {}
+
+// @media screen and (min-width: 1088px) {}
+
+// @media screen and (min-width: 1200px) {}
+
+// @media screen and (min-width: 1280px) {}
+
+// @media screen and (min-width: 1400px) {}
+
+// @media screen and (min-width: 1500px) {}
+
+// @media screen and (min-width: 1600px) {}
+
+// @media screen and (min-width: 1660px) {}
+
+/* <> */

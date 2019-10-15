@@ -1,0 +1,112 @@
+### Security.
+<IfModule mod_headers.c>
+  Header always set Content-Security-Policy "default-src 'https' 'self';"
+  Header always set Content-Security-Policy "frame-src platform.twitter.com;"
+  Header always set Content-Security-Policy "img-src 'self' data: i.ytimg.com www.google-analytics.com;"
+  Header always set Content-Security-Policy "object-src 'https' 'self';"
+  Header always set Content-Security-Policy "script-src 'self' www.google-analytics.com ajax.googleapis.com platform.twitter.com;"
+
+  Header always set Strict-Transport-Security "max-age=15768000;"
+  Header always set X-Content-Type-Options nosniff
+  Header always append X-Frame-Options "SAMEORIGIN"
+  Header always set X-XSS-Protection "1; mode=block"
+
+  Header always append Vary Accept-Encoding
+</IfModule>
+
+### Protect against DOS attacks by limiting file upload size
+LimitRequestBody 10240000
+
+### Deny directory listing.
+Options -Indexes
+
+<Directory "/scratch">
+  Deny from all
+</Directory>
+
+### Etag for multiple servers better FileETag None.
+FileETag MTime Size
+
+### Add correct content-type for documents, fonts and images.
+<IfModule mod_mime.c>
+  AddType application/pdf .pdf
+  AddType application/vnd.ms-fontobject .eot
+
+  AddType font/otf .otf
+  AddType font/ttf .ttf
+  AddType font/x-woff .woff
+
+  AddType image/gif .gif
+  AddType image/jpeg .jpg .jpeg .jpe
+  AddType image/png .png
+  AddType image/svg+xml .svg
+
+  ### Compression.
+  AddOutputFilterByType DEFLATE application/json application/x-javascript font/otf font/ttf image/svg+xml text/css text/html text/plain text/xml
+</IfModule>
+
+### Content type exirations.
+<IfModule mod_expires.c>
+  ExpiresActive On
+
+  ExpiresByType text/css A31536000
+  ExpiresByType text/x-component A31536000
+  ExpiresByType application/x-javascript A31536000
+  ExpiresByType application/javascript A31536000
+  ExpiresByType text/javascript A31536000
+  ExpiresByType text/x-js A31536000
+  ExpiresByType text/html A3600
+  ExpiresByType text/richtext A3600
+  ExpiresByType image/svg+xml A3600
+  ExpiresByType text/plain A3600
+  ExpiresByType text/xsd A3600
+  ExpiresByType text/xsl A3600
+  ExpiresByType text/xml A3600
+  ExpiresByType video/asf A31536000
+  ExpiresByType video/avi A31536000
+  ExpiresByType image/bmp A31536000
+  ExpiresByType application/java A31536000
+  ExpiresByType video/divx A31536000
+  ExpiresByType application/msword A31536000
+  ExpiresByType application/vnd.ms-fontobject A31536000
+  ExpiresByType application/x-msdownload A31536000
+  ExpiresByType image/gif A31536000
+  ExpiresByType application/x-gzip A31536000
+  ExpiresByType image/x-icon A31536000
+  ExpiresByType image/jpeg A31536000
+  ExpiresByType application/json A31536000
+  ExpiresByType application/vnd.ms-access A31536000
+  ExpiresByType audio/midi A31536000
+  ExpiresByType video/quicktime A31536000
+  ExpiresByType audio/mpeg A31536000
+  ExpiresByType video/mp4 A31536000
+  ExpiresByType video/mpeg A31536000
+  ExpiresByType application/pdf A31536000
+  ExpiresByType image/png A31536000
+  ExpiresByType application/vnd.ms-powerpoint A31536000
+  ExpiresByType audio/x-realaudio A31536000
+  ExpiresByType image/svg+xml A31536000
+  ExpiresByType application/x-shockwave-flash A31536000
+  ExpiresByType application/x-tar A31536000
+  ExpiresByType image/tiff A31536000
+  ExpiresByType application/x-font-ttf A31536000
+  ExpiresByType audio/wav A31536000
+  ExpiresByType application/zip A31536000
+</IfModule>
+
+### URL Rewrites.
+RewriteEngine On
+
+RewriteCond %{REQUEST_METHOD} ^TRACE
+RewriteRule .* - [F]
+
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+
+### Force SSL.
+RewriteCond %{HTTPS} off
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
+
+# <> #

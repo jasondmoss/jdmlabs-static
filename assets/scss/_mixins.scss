@@ -1,0 +1,37 @@
+/**
+ * Global: Functions + Mixins
+ *
+ * @category   Stylesheet
+ * @package    JDMLABS
+ * @author     Jason D. Moss <jason@jdmlabs.com>
+ * @copyright  2005-2019 Jason D. Moss. All rights freely given.
+ * @link       https://www.jdmlabs.com/
+ */
+
+
+/**
+ * Calculate rem value.
+ *
+ * @param  {Integer}  $size
+ *
+ * @return {String}  Rem value
+ */
+@function rem($size)
+{
+  $remSize: $size / 16px;
+
+  @return #{$remSize}rem;
+}
+
+
+/**
+ * Calculate vont size.
+ *
+ * @param  {Integer}  $size
+ */
+@mixin fontSize($size)
+{
+  font-size: rem($size);
+}
+
+/* <> */

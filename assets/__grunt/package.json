@@ -1,0 +1,27 @@
+{
+    "name": "jdmlabs",
+    "package": "JDMLABS",
+    "version": "13.0.0",
+    "copyright": "2005-2019 Jason D. Moss. All rights freely given.",
+    "license": "MIT",
+    "description": "The homepage of Jason D. Moss, a PHP + Front-End Developer at JdmLabs, located in Canada. Compliant. Portable. Functional.",
+    "homepage": "https://www.jdmlabs.com/",
+    "author": {
+        "name": "Jason D. Moss",
+        "email": "jason@jdmlabs.com",
+        "url": "https://www.jdmlabs.com/"
+    },
+    "repository": {},
+    "devDependencies": {
+        "grunt": "latest",
+        "grunt-banner": "latest",
+        "grunt-contrib-concat": "latest",
+        "grunt-contrib-jshint": "latest",
+        "grunt-contrib-sass": "latest",
+        "grunt-contrib-watch": "latest",
+        "grunt-notify": "latest"
+    },
+    "dependencies": {
+        "grunt-contrib-uglify-es": "github:gruntjs/grunt-contrib-uglify#harmony"
+    }
+}

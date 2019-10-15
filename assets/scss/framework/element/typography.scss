@@ -1,0 +1,180 @@
+/**
+ * Framework Elements: Typography
+ *
+ * @category   Stylesheet
+ * @package    JDMLABS
+ * @author     Jason D. Moss <jason@jdmlabs.com>
+ * @copyright  2005-2019 Jason D. Moss. All rights freely given.
+ * @link       https://www.jdmlabs.com/
+ */
+
+
+/**
+ * Headings.
+ * --------------------------------------------------------------------------- *
+ */
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  font-weight: 400;
+  line-height: 1.2;
+  color: inherit;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  font-family: $font-family--accent;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-family: $font-family--accent;
+}
+
+h3, h4, h5, h6 {
+  text-transform: capitalize;
+  font-size: 1rem;
+}
+
+h3 {
+  font-family: $font-family--accent;
+}
+
+h1, h2, h3 {
+  letter-spacing: 0.05rem;
+}
+
+h4 {
+  font-size: 1.2rem;
+}
+
+h5 {
+  font-size: 1rem;
+}
+
+h6 {
+  font-size: 0.8rem;
+}
+
+
+/**
+ * Paragraphs.
+ * --------------------------------------------------------------------------- *
+ */
+
+p {
+  margin: 0 0 2rem;
+}
+
+
+/**
+ * Anchor elements.
+ * --------------------------------------------------------------------------- *
+ */
+
+a {
+  &,
+  &:link,
+  &:visited {
+    text-decoration: none;
+    color: $color--anchor;
+  }
+
+  &:active,
+  &:focus,
+  &:hover {
+    text-decoration: underline;
+    color: $color--anchor-dark;
+  }
+}
+
+
+/**
+ * Semantic text elements.
+ * --------------------------------------------------------------------------- *
+ */
+
+a, ins, u {
+  text-decoration-skip: ink edges;
+}
+
+abbr[title] {
+  border-bottom: 0.05rem dotted;
+  text-decoration: none;
+  cursor: help;
+}
+
+kbd {
+  @include labelBase();
+  @include labelVariant(#fff, $color--base);
+
+  font-size: 0.7rem;
+}
+
+mark {
+  @include labelVariant($color--base-primary, $background--highlight);
+
+  padding: 0.05rem 0.1rem 0;
+  border-bottom: 0.05rem solid darken($background--highlight, 15%);
+  border-radius: 0.1rem;
+}
+
+
+/**
+ * Blockquote.
+ * --------------------------------------------------------------------------- *
+ */
+
+blockquote {
+  margin-left: 0;
+  padding: 0.4rem 0.8rem;
+  border-left: 0.1rem solid $color--border;
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+
+
+
+/**
+ * Media Queries.
+ *
+ * =============================================================================
+ */
+
+/** Min */
+
+@media screen and (min-width: 480px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.95rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+}
+
+/* <> */

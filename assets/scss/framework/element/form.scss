@@ -1,0 +1,124 @@
+/**
+ * Framework Elements: Forms
+ *
+ * @category   Stylesheet
+ * @package    JDMLABS
+ * @author     Jason D. Moss <jason@jdmlabs.com>
+ * @copyright  2005-2019 Jason D. Moss. All rights freely given.
+ * @link       https://www.jdmlabs.com/
+ */
+
+form {
+  width: 100%;
+  background: none;
+  background-color: transparent;
+
+  fieldset,
+  label,
+  input,
+  select,
+  textarea {
+    -webkit-transition: all 0.15s ease-in-out;
+            transition: all 0.15s ease-in-out;
+  }
+
+  input[type="color"],
+  input[type="date"],
+  input[type="datetime"],
+  input[type="datetime-local"],
+  input[type="email"],
+  input[type="month"],
+  input[type="number"],
+  input[type="password"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="text"],
+  input[type="time"],
+  input[type="url"],
+  input[type="week"],
+  select,
+  textarea {
+    display: inline-block;
+    width: 100%;
+    padding: 0.55rem 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    background-color: #fafafa;
+    box-shadow: inset 0 1px 3px #eee;
+    vertical-align: middle;
+    font-size: 1rem;
+    line-height: 1.4;
+
+    &:focus {
+      outline: 0;
+      background-color: #fff;
+      color: #000;
+    }
+
+    &[disabled] {
+      cursor: not-allowed;
+    }
+  }
+
+  input[type="checkbox"]:focus,
+  input[type="file"]:focus,
+  input[type="radio"]:focus {
+    outline-width: 1px;
+    outline-style: auto;
+  }
+
+  input[type="checkbox"],
+  input[type="radio"] {
+    display: inline-block;
+    margin: 0.5rem 1rem 0.5rem 0;
+  }
+
+  select {
+    /* Normalizes the height; padding is not sufficient. */
+    height: 2.25rem;
+    border-width: 1px;
+    border-style: solid;
+    background-color: #fff;
+
+    &[multiple] {
+      height: auto;
+    }
+  }
+
+  label {
+    margin: 0.5rem 0 0.2rem;
+    font-weight: 600;
+  }
+
+  fieldset {
+    clear: both;
+    float: left;
+    width: 100%;
+    margin: 0;
+    padding: 0.35rem 0 0.75rem;
+    border: 0;
+  }
+
+  legend {
+    display: block;
+    width: 100%;
+    margin-bottom: 0.3rem;
+    padding: 0.3rem 0;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+  }
+
+  .form-item {
+    margin-bottom: 1rem;
+  }
+
+  .description {
+    display: inline-block;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    font-style: italic;
+    font-size: 0.7rem;
+  }
+}
+
+/* <> */

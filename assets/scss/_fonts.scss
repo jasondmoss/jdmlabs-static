@@ -1,0 +1,427 @@
+/**
+ * Global: Fonts/Icon Fonts
+ *
+ * @category   Stylesheet
+ * @package    JDMLABS
+ * @author     Jason D. Moss <jason@jdmlabs.com>
+ * @copyright  2005-2019 Jason D. Moss. All rights freely given.
+ * @link       https://www.jdmlabs.com/
+ */
+
+
+/**
+ * Google Font: Open Sans
+ *
+ * @link  https://fonts.google.com/specimen/Open+Sans?selection.family=Open+Sans:400,600,700
+ * @link  https://google-webfonts-helper.herokuapp.com/fonts/open-sans?subsets=latin,latin-ext
+ * =============================================================================
+ */
+
+/* open-sans-regular - latin-ext_latin */
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/open-sans/open-sans-v15-latin-ext_latin-regular.eot");
+  src: local("Open Sans Regular"),
+       local("OpenSans-Regular"),
+       url("../fonts/open-sans/open-sans-v15-latin-ext_latin-regular.eot#iefix") format("embedded-opentype"),
+       url("../fonts/open-sans/open-sans-v15-latin-ext_latin-regular.woff2") format("woff2"),
+       url("../fonts/open-sans/open-sans-v15-latin-ext_latin-regular.woff") format("woff"),
+       url('../fonts/open-sans/open-sans-v15-latin-ext_latin-regular.ttf') format("truetype");
+}
+
+/* open-sans-600 - latin-ext_latin */
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/open-sans/open-sans-v15-latin-ext_latin-600.eot");
+  src: local("Open Sans SemiBold"),
+       local("OpenSans-SemiBold"),
+       url("../fonts/open-sans/open-sans-v15-latin-ext_latin-600.eot#iefix") format("embedded-opentype"),
+       url("../fonts/open-sans/open-sans-v15-latin-ext_latin-600.woff2") format("woff2"),
+       url("../fonts/open-sans/open-sans-v15-latin-ext_latin-600.woff") format("woff"),
+       url('../fonts/open-sans/open-sans-v15-latin-ext_latin-600.ttf') format("truetype");
+}
+
+/* open-sans-700 - latin-ext_latin */
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/open-sans/open-sans-v15-latin-ext_latin-700.eot");
+  src: local("Open Sans Bold"),
+       local("OpenSans-Bold"),
+       url("../fonts/open-sans/open-sans-v15-latin-ext_latin-700.eot#iefix") format("embedded-opentype"),
+       url("../fonts/open-sans/open-sans-v15-latin-ext_latin-700.woff2") format("woff2"),
+       url("../fonts/open-sans/open-sans-v15-latin-ext_latin-700.woff") format("woff"),
+       url('../fonts/open-sans/open-sans-v15-latin-ext_latin-700.ttf') format("truetype");
+}
+
+
+
+
+/**
+ * Custom Fonts.
+ * Sources located in {THEME}/scratch/fonts directory
+ *
+ * @link http://fontello.com/
+ * =============================================================================
+ */
+@font-face {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/fontello/fontello.eot");
+  src: url("../fonts/fontello/fontello.eot#iefix") format("embedded-opentype"),
+       url("../fonts/fontello/fontello.woff2") format("woff2"),
+       url("../fonts/fontello/fontello.woff2") format("woff"),
+       url('../fonts/fontello/fontello.ttf') format("truetype");
+}
+
+[class^="icon-"]::before,
+[class*=" icon-"]::before {
+  display: inline-block;
+  width: 1rem;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  text-transform: none;
+  text-decoration: inherit;
+  font-variant: normal;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1rem;
+  font-family: "fontello";
+  speak: none;
+
+  -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+}
+
+
+/** Icon names */
+
+.icon-link-ext,
+.icon-mail,
+.icon-phone {
+  &::before {
+    // font-variant: super;
+    vertical-align: super;
+    font-size: 0.65rem;
+    color: #444;
+  }
+}
+
+.icon-tripadvisor::before {
+  margin-left: -0.15rem;
+}
+
+/* -- */
+
+.icon-angle-double-left::before {
+  content: "\f100";
+}
+
+.icon-angle-double-right::before {
+  content: "\f101";
+}
+
+.icon-angle-down::before {
+  content: "\f107";
+}
+
+.icon-angle-left::before {
+  content: "\f104";
+}
+
+.icon-angle-right::before {
+  content: "\f105";
+}
+
+.icon-angle-up::before {
+  content: "\f106";
+}
+
+.icon-arrow-down-big::before {
+  content: "\e829";
+}
+
+.icon-arrow-down-small::before {
+  content: "\e825";
+}
+
+.icon-arrow-left-big::before {
+  content: "\e828";
+}
+
+.icon-arrow-left-small::before {
+  content: "\e822";
+}
+
+.icon-arrow-right-big::before {
+  content: "\e827";
+}
+
+.icon-arrow-right-small::before {
+  content: "\e823";
+}
+
+.icon-arrow-up-big::before {
+  content: "\e826";
+}
+
+.icon-arrow-up-small::before {
+  content: "\e824";
+}
+
+.icon-attention::before {
+  content: "\f12a";
+}
+
+.icon-basket::before {
+  content: "\e808";
+}
+
+.icon-calendar::before {
+  content: "\e809";
+}
+
+.icon-cancel::before {
+  content: "\e803";
+}
+
+.icon-car::before {
+  content: "\f1b9";
+}
+
+.icon-certificate::before {
+  content: "\f0a3";
+}
+
+.icon-circle-notch::before {
+  content: "\f1ce";
+}
+
+.icon-clock::before {
+  content: "\e80e";
+}
+
+.icon-cog::before {
+  content: "\e820";
+}
+
+.icon-down-dir::before {
+  content: "\e80f";
+}
+
+.icon-download::before {
+  content: "\e82b";
+}
+
+.icon-facebook::before {
+  content: "\f09a";
+}
+
+.icon-flight::before {
+  content: "\e82a";
+}
+
+.icon-globe::before {
+  content: "\e819";
+}
+
+.icon-heart::before {
+  content: "\e82c";
+}
+
+.icon-heart-empty::before {
+  content: "\e82d";
+}
+
+.icon-help::before {
+  content: "\f128";
+}
+
+.icon-info::before {
+  content: "\f129";
+}
+
+.icon-input-checked::before {
+  content: "\e81a";
+}
+
+.icon-input-empty::before {
+  content: "\f096";
+}
+
+.icon-instagram::before {
+  content: "\f16d";
+}
+
+.icon-left-dir::before {
+  content: "\e811";
+}
+
+.icon-left-open::before {
+  content: "\e813";
+}
+
+.icon-link-ext::before {
+  content: "\f08e";
+}
+
+.icon-linkedin::before {
+  content: "\f0e1";
+}
+
+.icon-location::before {
+  content: "\e806";
+}
+
+.icon-lock::before {
+  content: "\e821";
+}
+
+.icon-mail::before {
+  content: "\e801";
+}
+
+.icon-minus::before {
+  content: "\e805";
+}
+
+.icon-ok::before {
+  content: "\e802";
+}
+
+.icon-pause::before {
+  content: "\e818";
+}
+
+.icon-pencil::before {
+  content: "\e81d";
+}
+
+.icon-phone::before {
+  content: "\e807";
+}
+
+.icon-play::before {
+  content: "\e816";
+}
+
+.icon-plus::before {
+  content: "\e804";
+}
+
+.icon-print::before {
+  content: "\e81e";
+}
+
+.icon-quote-left::before {
+  content: "\e81b";
+}
+
+.icon-quote-right::before {
+  content: "\e81c";
+}
+
+.icon-radio-checked::before {
+  content: "\f192";
+}
+
+.icon-radio-empty::before {
+  content: "\f10c";
+}
+
+.icon-refresh::before {
+  content: "\e815";
+}
+
+.icon-right-dir::before {
+  content: "\e812";
+}
+
+.icon-right-open::before {
+  content: "\e814";
+}
+
+.icon-rss::before {
+  content: "\f09e";
+}
+
+.icon-search::before {
+  content: "\e800";
+}
+
+.icon-star::before {
+  content: "\e82e";
+}
+
+.icon-star-empty::before {
+  content: "\e82f";
+}
+
+.icon-stop::before {
+  content: "\e817";
+}
+
+.icon-tags::before {
+  content: "\e81f";
+}
+
+.icon-trash::before {
+  content: "\f1f8";
+}
+
+.icon-tripadvisor::before {
+  content: "\f262";
+}
+
+.icon-twitter::before {
+  content: "\f099";
+}
+
+.icon-up-circled::before {
+  content: "\f0aa";
+}
+
+.icon-up-dir::before {
+  content: "\e810";
+}
+
+.icon-vimeo::before {
+  content: "\f27d";
+}
+
+.icon-volume-off::before {
+  content: "\e80a";
+}
+
+.icon-volume-up::before {
+  content: "\e80b";
+}
+
+.icon-wechat::before {
+  content: "\f1d7";
+}
+
+.icon-weibo::before {
+  content: "\f18a";
+}
+
+.icon-youtube::before {
+  content: "\f16a";
+}
+
+.icon-zoom-in::before {
+  content: "\e80c";
+}
+
+.icon-zoom-out::before {
+  content: "\e80d";
+}
+
+/* <> */

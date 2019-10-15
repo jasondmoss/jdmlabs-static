@@ -1,0 +1,74 @@
+/**
+ * Framework Elements: Labels
+ *
+ * @category   Stylesheet
+ * @package    JDMLABS
+ * @author     Jason D. Moss <jason@jdmlabs.com>
+ * @copyright  2005-2019 Jason D. Moss. All rights freely given.
+ * @link       https://www.jdmlabs.com/
+ */
+
+
+.label {
+  @include labelBase();
+  @include labelVariant(lighten($color--base-primary, 5%), $background--primary-dark);
+
+  display: inline-block;
+
+  &-rounded {
+    padding-right: 0.4rem;
+    padding-left: 0.4rem;
+    border-radius: 5rem;
+  }
+
+  &-inline {
+    display: inline-block;
+  }
+
+  &-short {
+    min-width: 4em;
+  }
+
+  &-medium {
+    min-width: 6em;
+  }
+
+  &-large {
+    min-width: 9em;
+  }
+
+  &-xlarge {
+    min-width: 15em;
+  }
+
+  &-bold {
+    font-weight: 600;
+  }
+
+
+  /**
+   * Label colors.
+   * ------------------------------------------------------------------------- *
+   */
+  &-primary {
+    @include labelVariant(#fff, $color--accent-primary);
+  }
+
+  &-secondary {
+    @include labelVariant($color--accent-primary, $color--accent-secondary);
+  }
+
+  &-success {
+    @include labelVariant(#fff, $color--status-ok);
+  }
+
+  &-warning {
+    @include labelVariant(#fff, $color--status-warning);
+  }
+
+  &-error {
+    @include labelVariant(#fff, $color--status-error);
+  }
+}
+
+/* <> */
