@@ -22,7 +22,7 @@
   --size--font-base: 18px;
 
   --font-family--base: "Fira Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto;
-  --font-family--accent: "Fira Sans Black", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto;
+  --font-family--accent: "Fira Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto;
   --font-family--fallback: "Helvetica Neue", Helvetica, Sans-Serif;
   --font-family: var(--font-family--base), var(--font-family--fallback);
 
@@ -37,7 +37,7 @@
    * ------------------------------------------------------------------------- *
    */
 
-  --color--primary: #cfc7d4;
+  --color--primary: #ded5e3;
   // --color--primary: ;
 
   // --color--accent-primary: #007c3f;
@@ -53,7 +53,7 @@
   // --color--accent-tertiary: #f7a612;
   // --color--accent-tertiary-dark: #e57526;
 
-  // --color--anchor: var(--color--accent-secondary);
+  --color--anchor: #ff4e1f;
   // --color--anchor-dark: darken(var(--color--anchor), 10%);
   // --color--anchor-light: lighten(var(--color--anchor), 10%);
 
@@ -71,8 +71,8 @@
   // --color--status-error: #ffcac8;
 
   --background--primary: #3d3741;
-  // --background--primary-dark: ;
-  // --background--primary-light: ;
+  --background--primary-dark: #29252b;
+  --background--primary-light: #9788a1;
 
   --background--highlight: #b491cc;
 
