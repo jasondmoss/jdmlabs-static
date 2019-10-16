@@ -12,16 +12,54 @@
 
 
 .site--header {
-  background-color: $debug--orange;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  background-color: $debug--blue;
 
   .nameplate {
+    width: 10rem;
+
+    background-color: $debug--purple;
+
     .u-logo {
       max-width: 2rem;
+      margin: 0 1rem 0 0;
     }
 
     .org {
       font-size: 1.25rem;
     }
+  }
+
+  .nav--main {
+    width: 100%;
+  }
+
+
+
+
+  /**
+   * Media Queries.
+   *
+   * ===========================================================================
+   */
+
+  /** Min */
+
+  @media screen and (min-width: 411px) {
+    .nameplate {
+      width: 45%;
+    }
+
+    .nav--main {
+      width: 55%;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    grid-template-columns: [col] 25% [col] 25% [col] 25% [col] 25%;
+    grid-template-rows: [row] auto [row] auto [row];
   }
 }
 

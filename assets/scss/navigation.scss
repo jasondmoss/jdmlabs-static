@@ -12,8 +12,31 @@
 
 
 .nav {
-  .nav-title {
+  background-color: $debug--red;
+
+  &--title {
     @extend .reader;
+  }
+
+  &--main,
+  &--ego {
+    display: flex;
+    flex-flow: row wrap;
+    // margin-right: auto;
+    // margin-left: auto;
+  }
+
+  &--main {
+    justify-content: flex-end;
+  }
+
+  &--ego {
+    justify-content: space-around;
+  }
+
+  a {
+    display: inline-block;
+    padding: 1rem;
   }
 }
 
