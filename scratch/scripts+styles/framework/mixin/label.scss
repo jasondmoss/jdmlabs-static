@@ -22,7 +22,7 @@
 
 /**
  * @param  {Color}  $color:    #fff
- * @param  {Color}  $background--primary: var($color--accent-primary)
+ * @param  {Color}  $background--primary: $color--accent-primary
  */
 @mixin labelVariant($color: #fff, $background--primary: $color--accent-primary)
 {
