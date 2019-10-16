@@ -56,13 +56,25 @@
 <header id="siteHeader" class="site--header">
   <h1 itemprop="headline" class="nameplate"><span itemscope itemtype="https://schema.org/Organization">
     <a itemprop="url" rel="bookmark home" href="https://www.jdmlabs.com/" title=" Welcome to JdmLabs ">
-      <img itemprop="logo" class="u-logo" src="./assets/images/ui/strata-256x256.png" width="250" height="250" alt="JdmLabs logo">
+      <img itemprop="logo" class="u-logo" src="./assets/images/ui/strata-256x256.png" alt="JdmLabs website logo">
       <span itemprop="name" class="org">JdmLabs</span>
     </a>
   </span></h1>
+
+  <nav itemscope itemtype="https://schema.org/SiteNavigationElement" id="mainMenu" class="nav--main">
+    <h4 class="nav-title">Main Menu</h4>
+    <ul class="nav">
+      <li class="nav-item">
+        <a rel="" class="nav-link" href="#">Work</a>
+      </li>
+      <li class="nav-item">
+        <a rel="bookmark" class="nav-link" href="#siteFooter">Contact</a>
+      </li>
+    </ul>
+  </nav>
 </header>
 
-<main id="siteContent" class="site--content">
+<main itemprop="mainContentOfPage" id="siteContent" class="site--content">
   <article itemscope itemtype="https://schema.org/Article" class="h-entry h-as-article main" lang="en-CA">
     <header class="entry--header">
       <h2 itemprop="headline" class="entry--title">Hello. I am Jason D. Moss, a Web Developer at JdmLabs, from <a rel="external" href="https://spectacularnwt.com/" title="Spectacular Northwest Territories">Canada</a>.</h2>
@@ -97,7 +109,23 @@
   </article>
 </main>
 
-<footer id="siteFooter" class="site--footer"></footer>
+<footer id="siteFooter" class="site--footer"><div class="endo">
+  <h4 class="offscreen">Social Profiles</h4>
+  <nav itemscope itemtype="https://schema.org/Organization" id="social" class="ego-boost">
+    <link itemprop="url" href="https://www.jdmlabs.com">
+    <a itemprop="sameAs" rel="author external me profile" href="https://about.me/jasondmoss" title=" About.me profile "><i class="aboutme icon"></i> <span>About.me</span></a><!-- <span class="nav-separator">&#124;</span> -->
+    <a itemprop="sameAs" rel="author external me profile" href="https://github.com/jasondmoss" title=" GitHub profile "><i class="github icon"></i> <span>GitHub</span></a><!-- <span class="nav-separator">&#124;</span> -->
+    <a itemprop="sameAs" rel="author external me profile" href="https://www.linkedin.com/in/jasondmoss" title=" LinkedIn profile "><i class="linkedin icon"></i> <span>LinkedIn</span></a><!-- <span class="nav-separator">&#124;</span> -->
+    <a itemprop="sameAs" rel="author external me profile" href="https://twitter.com/jasondmoss" title=" Twitter profile "><i class="twitter icon"></i> <span>Twitter</span></a><!-- <span class="nav-separator">&#124;</span> -->
+    <a itemprop="sameAs" rel="author external me profile" href="https://www.last.fm/user/jasonmoss" title=" LastFM profile "><i class="lastfm icon"></i> <span>Last.fm</span></a>
+  </nav>
+
+  <div itemscope itemtype="https://schema.org/WPFooter" class="site-credits">
+    &#169; <span itemprop="copyrightYear">2005</span>-<span itemprop="copyrightYear">2019</span>
+    <span itemprop="copyrightHolder name" title=" Jason D. Moss, Web Developer Extra(ordinaire) ">Jason D. Moss</span>.
+    <span class="rights">All rights freely given [<a itemprop="license" rel="external license" href="https://www.jdmlabs.com/license/license-MIT-1.1.txt" title="MIT License">MIT</a>].</span>
+  </div>
+</div></footer>
 
 <script src="./assets/min/polyfills.js"></script>
 <script src="./assets/min/scripts.js"></script>
