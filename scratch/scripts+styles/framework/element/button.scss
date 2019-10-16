@@ -31,10 +31,10 @@
     :not([data-dismiss]),
   .btn {
     position: relative;
-    border: 1px solid var(--color--gray-light);
+    border: 1px solid $color--gray-light;
     border-radius: 0.15rem;
     background: none;
-    background-color: var(--color--gray-ultralight);
+    background-color: $color--gray-ultralight;
     box-shadow: none;
     text-align: center;
     text-shadow: none;

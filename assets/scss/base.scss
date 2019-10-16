@@ -51,7 +51,7 @@
 }
 
 ::selection {
-  background-color: var(--background--highlight);
+  background-color: $background--highlight;
   color: #000;
 }
 
@@ -88,11 +88,11 @@ body {
 html {
   width: 100%;
   height: 100%;
-  background-color: var(--background--primary);
+  background-color: $background--primary;
   font-style: normal;
   font-weight: 400;
-  font-family: var(--font-family);
-  font-size: var(--size--font-base);
+  font-family: $font-family--base;
+  font-size: $size--font-base;
   line-height: 1.5;
 
   -ms-overflow-style: scrollbar;
@@ -102,7 +102,7 @@ html {
 body {
   background-color: transparent;
   font: inherit;
-  color: var(--color--primary);
+  color: $color--primary;
   cursor: default;
 
   animation-duration: 0.15s;
@@ -142,13 +142,13 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   text-transform: uppercase;
   font-size: 1.3rem;
-  font-family: var(--font-family--accent);
+  font-family: $font-family--accent;
 }
 
 h2 {
   text-transform: uppercase;
   font-size: 1.2rem;
-  font-family: var(--font-family--accent);
+  font-family: $font-family--accent;
 }
 
 h3, h4, h5, h6 {
@@ -157,7 +157,7 @@ h3, h4, h5, h6 {
 }
 
 h3 {
-  font-family: var(--font-family--accent);
+  font-family: $font-family--accent;
 }
 
 h1, h2, h3 {
@@ -177,7 +177,7 @@ h6 {
 }
 
 p {
-  margin: 0 0 2rem;
+  margin: 0 0 1rem;
 }
 
 a {
@@ -185,18 +185,16 @@ a {
   &:link,
   &:visited {
     padding: 2px;
-    // padding-right: 1px;
-    // padding-left: 1px;
     text-decoration: none;
-    color: var(--color--anchor);
+    color: $color--anchor;
   }
 
   &:active,
   &:focus,
   &:hover {
-    text-decoration: underline wavy #fff;
-    background-color: var(--background--primary-dark);
-    color: #fff;
+    text-decoration: underline wavy #000;
+    background-color: $background--highlight;
+    color: #000;
   }
 }
 

@@ -10,11 +10,11 @@
 
 
 .label {
-  $color--primary-base: var(--color--base-primary);
-  $color--primary-dark: var(--background--primary-dark);
-  $color--status-ok: var(--color--status-ok);
-  $color--status-warning: var(--color--status-warning);
-  $color--status-error: var(--color--status-error);
+  $color--primary-base: $color--base-primary;
+  $color--primary-dark: $background--primary-dark;
+  $color--status-ok: $color--status-ok;
+  $color--status-warning: $color--status-warning;
+  $color--status-error: $color--status-error;
 
   @include labelBase();
   @include labelVariant($color--primary-base, $color--primary-dark);

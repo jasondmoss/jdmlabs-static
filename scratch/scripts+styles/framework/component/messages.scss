@@ -15,13 +15,13 @@
   width: 100%;
   margin: 1rem 0;
   padding: 0.8rem 0.8rem 0.8rem 3rem;
-  border: 2px solid var(--color--base);
+  border: 2px solid $color--base;
   border-radius: 0.1rem;
   background-position: 1rem;
   background-repeat: no-repeat;
   color: #fff;
 
-  @include messageVariant(var(--color--base));
+  @include messageVariant($color--base);
 
   &:first-child {
     margin-top: 0;
@@ -86,47 +86,43 @@
   }
 
   &-primary {
-    @include messageVariant(var(--color--accent-primary));
+    @include messageVariant($color--accent-primary);
 
     a {
-      // color: darken(var(--color--accent-primary), 85%);
-      color: var(--color--accent-primary);
+      color: darken($color--accent-primary, 85%);
     }
   }
 
   &-ok,
   &-status,
   &-success {
-    @include messageVariant(var(--color--status-ok));
+    @include messageVariant($color--status-ok);
 
     background-image: url("/core/misc/icons/73b355/check.svg");
 
     a {
-      // color: darken(var(--color--status-ok), 85%);
-      color: var(--color--status-ok);
+      color: darken($color--status-ok, 85%);
     }
   }
 
   &-warning {
-    @include messageVariant(var(--color--status-warning));
+    @include messageVariant($color--status-warning);
 
     background-image: url("/core/misc/icons/e29700/warning.svg");
 
     a {
-      // color: darken(var(--color--status-warning), 85%);
-      color: var(--color--status-warning);
+      color: darken($color--status-warning, 85%);
     }
   }
 
   &-danger,
   &-error {
-    @include messageVariant(var(--color--status-error));
+    @include messageVariant($color--status-error);
 
     background-image: url("/core/misc/icons/e32700/error.svg");
 
     a {
-      // color: darken(var(--color--status-error), 85%);
-      color: darkenar(--color--status-error);
+      color: darken($color--status-error, 85%);
     }
   }
 }

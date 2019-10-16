@@ -72,8 +72,8 @@ audio:not([controls]) {
 html {
   font-style: normal;
   font-weight: 400;
-  font-family: var(--font-family);
-  font-size: var(--size--font-base);
+  font-family: $font-family;
+  font-size: $size--font-base;
   line-height: 1.5;
 }
 

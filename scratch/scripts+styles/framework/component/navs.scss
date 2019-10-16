@@ -23,13 +23,13 @@
       &:link,
       &:visited {
         text-decoration: none;
-        color: var(--color--gray-dark);
+        color: $color--gray-dark;
       }
 
       &:focus,
       &:hover {
         background-color: transparent;
-        color: var(--color--accent-primary);
+        color: $color--accent-primary;
       }
     }
 
@@ -39,12 +39,12 @@
         &:link,
         &:visited {
           font-weight: bold;
-          color: var(--color--gray-dark);
+          color: $color--gray-dark;
         }
 
         &:focus,
         &:hover {
-          color: var(--color--accent-primary);
+          color: $color--accent-primary;
         }
       }
     }
