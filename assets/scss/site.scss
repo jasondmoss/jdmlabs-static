@@ -17,29 +17,8 @@
  */
 @import "fonts";
 @import "variables";
-// @import "animations";
-// @import "mixins";
+@import "animations";
 
-
-/**
- * Base Framework
- * --------------------------------------------------------------------------- *
- */
-// @import "framework/framework-setup.scss";
-
-
-/**
- * Vendors
- * --------------------------------------------------------------------------- *
- */
-// @import "vendor/flickity.scss";
-// @import "vendor/imageviewer.scss";
-
-
-/**
- * Theme
- * --------------------------------------------------------------------------- *
- */
-// @import "theme/theme-setup.scss";
+@import "base";
 
 /* <> */
