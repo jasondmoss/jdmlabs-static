@@ -1,0 +1,102 @@
+/**
+ * Functions
+ *
+ * @category   Stylesheet
+ * @package    JDMLABS
+ * @author     Jason D. Moss <jason@jdmlabs.com>
+ * @copyright  2005-2019 Jason D. Moss. All rights freely given.
+ * @link       https://www.jdmlabs.com/
+ */
+
+
+@function breakpoint-min($name, $breakpoints: $grid-breakpoints)
+{
+  $min: map-get($breakpoints, $name);
+
+  @return if($min != 0, $min, null);
+}
+
+@function breakpoint-max($name, $breakpoints: $grid-breakpoints)
+{
+  $next: breakpoint-next($name, $breakpoints);
+
+  @return if($next, breakpoint-min($next, $breakpoints) - .02, null);
+}
+
+
+/* -- */
+
+
+@mixin media-breakpoint-down($name, $breakpoints: $grid-breakpoints)
+{
+  $max: breakpoint-max($name, $breakpoints);
+  @if $max {
+    @media (max-width: $max) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+@mixin media-breakpoint-up($name, $breakpoints: $grid-breakpoints)
+{
+  $min: breakpoint-min($name, $breakpoints);
+  @if $min {
+    @media (min-width: $min) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+
+@mixin display-grid
+{
+  display: grid;
+  grid-template-rows: auto;
+  grid-gap: 1.5em;
+}
+
+
+/* -- */
+
+
+%grid-helpers-base {
+  @include media-breakpoint-up(md) {
+    @include display-grid;
+
+    grid-template-columns: 1fr;
+  }
+}
+
+.cols-2 {
+  @extend %grid-helpers-base;
+  @include media-breakpoint-up(md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.cols-3 {
+  @extend %grid-helpers-base;
+  @include media-breakpoint-up(md) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.cols-4 {
+  @extend %grid-helpers-base;
+  @include media-breakpoint-up(md) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.cols-auto-fit {
+  @extend %grid-helpers-base;
+  @include media-breakpoint-up(md) {
+    grid-template-columns: repeat(auto-fit, minmax(15.625em, 1fr));
+  }
+}
+
+/* <> */

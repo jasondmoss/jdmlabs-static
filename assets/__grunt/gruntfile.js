@@ -74,7 +74,7 @@ module.exports = function (grunt) {
                         "../scripts/methods.js",
                         "../scripts/vendor/*.js",
                         "../scripts/component/*.js",
-                        "../scripts/site.js"
+                        "../scripts/scripts.js"
                     ]
                 }
             }
@@ -94,7 +94,7 @@ module.exports = function (grunt) {
                     update: true
                 },
                 files: {
-                    "../min/styles.css": "../scss/site.scss"
+                    "../min/styles.css": "../scss/styles.scss"
                 }
             }
         },

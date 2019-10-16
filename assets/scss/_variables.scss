@@ -10,7 +10,14 @@
 
 
 $width--container-max: 1400px;
-$width--website-max: 2200px;
+$width--website-max: 1800px;
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
 
 
 /**
@@ -37,41 +44,16 @@ $font-family--cjk-ko: $font-family--base, "Malgun Gothic", $font-family--fallbac
  */
 
 $color--primary: #ded5e3;
-// $color--primary: ;
 
-// $color--accent-primary: #007c3f;
-// $color--accent-primary-dark: #487528;
-// $color--accent-primary-medium: #7aa225;
-// $color--accent-primary-light: #86bc25;
+// $color--secondary: #;
 
-// $color--accent-secondary: #005a98;
-// $color--accent-secondary-dark: darken($color--accent-secondary, 3%);
-// $color--accent-secondary-light: #019fda;
-// $color--accent-secondary-ultralight: #e1f3fa;
-
-// $color--accent-tertiary: #f7a612;
-// $color--accent-tertiary-dark: #e57526;
+// $color--tertiary-dark: #;
 
 $color--anchor: #ff4e1f;
-// $color--anchor-dark: darken($color--anchor, 10%);
-// $color--anchor-light: lighten($color--anchor, 10%);
-
-// $color--gray: #a6a6a6;
-// $color--gray-dark: #5a5a5a;
-// $color--gray-light: #d9d9d9;
-// $color--gray-ultralight: #f8f8f8;
-
-// $color--border: lighten($color--base, 65%);
-// $color--border-dark: darken($color--border, 10%);
-// $color--border-light: lighten($color--border, 8%);
-
-// $color--status-ok: #b7ffc0;
-// $color--status-warning: #ffe7aa;
-// $color--status-error: #ffcac8;
 
 $background--primary: #3d3741;
-$background--primary-dark: #29252b;
-$background--primary-light: #9788a1;
+// $background--primary-dark: #29252b;
+// $background--primary-light: #9788a1;
 
 $background--highlight: #fff4b1;
 

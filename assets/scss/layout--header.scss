@@ -15,10 +15,12 @@
   background-color: $debug--orange;
 
   .nameplate {
-    background-color: $debug--purple;
-
     .u-logo {
+      max-width: 2rem;
+    }
 
+    .org {
+      font-size: 1.25rem;
     }
   }
 }

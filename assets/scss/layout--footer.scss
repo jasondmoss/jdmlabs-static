@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 /**
- * Site Content
+ * Site Footer
  *
  * @category   Stylesheet
  * @package    JDMLABS
@@ -10,5 +10,9 @@
  * @link       https://www.jdmlabs.com/
  */
 
+
+.site--footer {
+  background-color: $debug--orange;
+}
 
 /* <> */

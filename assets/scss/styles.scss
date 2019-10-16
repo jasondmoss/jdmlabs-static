@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 /**
- * Base SCSS Styles
+ * Base Styles
  *
  * @category   Stylesheet
  * @package    JDMLABS
@@ -17,13 +17,16 @@
  */
 @import "fonts";
 @import "variables";
+@import "functions";
 @import "animations";
 
 @import "base";
 
-@import "layout/base";
-@import "layout/site--header";
-@import "layout/site--content";
-@import "layout/site--footer";
+@import "layout--base";
+@import "layout--header";
+@import "layout--content";
+@import "layout--footer";
+
+@import "navigation";
 
 /* <> */

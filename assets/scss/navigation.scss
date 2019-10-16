@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 /**
- * Base Layout
+ * Navigation
  *
  * @category   Stylesheet
  * @package    JDMLABS
@@ -10,5 +10,11 @@
  * @link       https://www.jdmlabs.com/
  */
 
+
+.nav {
+  .nav-title {
+    @extend .reader;
+  }
+}
 
 /* <> */
