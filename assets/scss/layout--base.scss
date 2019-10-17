@@ -40,7 +40,8 @@ body {
     .site--primary-image {
       grid-column: col 3 / span 2;
       grid-row: row / span 2;
-      align-self: center;
+      align-self: start;
+      margin-top: 5rem;
     }
 
     .site--introduction {
