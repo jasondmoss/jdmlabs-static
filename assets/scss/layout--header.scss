@@ -15,12 +15,13 @@
   display: flex;
   flex-flow: row wrap;
   align-items: center;
-  background-color: $debug--blue;
 
   .nameplate {
     width: 10rem;
 
-    background-color: $debug--purple;
+    a {
+      padding: 0.55rem 0.5rem;
+    }
 
     .u-logo {
       max-width: 2rem;
@@ -55,11 +56,6 @@
     .nav--main {
       width: 55%;
     }
-  }
-
-  @media screen and (min-width: 880px) {
-    // grid-template-columns: [col] 25% [col] 25% [col] 25% [col] 25%;
-    // grid-template-rows: [row] auto [row] auto [row];
   }
 }
 

@@ -12,8 +12,6 @@
 
 
 .nav {
-  background-color: $debug--red;
-
   &--title {
     @extend .reader;
   }
@@ -22,8 +20,6 @@
   &--ego {
     display: flex;
     flex-flow: row wrap;
-    // margin-right: auto;
-    // margin-left: auto;
   }
 
   &--main {
@@ -32,11 +28,14 @@
 
   &--ego {
     justify-content: space-around;
+    max-width: 40rem;
+    margin-right: auto;
+    margin-left: auto;
   }
 
   a {
     display: inline-block;
-    padding: 1rem;
+    padding: 1.25rem 1rem 0.75rem;
   }
 }
 

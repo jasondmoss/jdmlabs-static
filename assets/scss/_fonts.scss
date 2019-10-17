@@ -72,24 +72,12 @@
    -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-aboutme::before {
-  content: "\e800";
-}
-
-.icon-twitter::before {
-  content: "\f099";
-}
-
-.icon-github::before {
-  content: "\f09b";
-}
-
-.icon-linkedin::before {
-  content: "\f0e1";
-}
-
-.icon-lastfm::before {
-  content: "\f202";
-}
+.icon-aboutme::before {  content: "\e800"; }
+.icon-behance::before {  content: "\f1b4"; }
+.icon-github::before {   content: "\f09b"; }
+.icon-lastfm::before {   content: "\f202"; }
+.icon-linkedin::before { content: "\f0e1"; }
+.icon-mail::before {     content: "\e801"; }
+.icon-twitter::before {  content: "\f099"; }
 
 /* <> */

@@ -15,25 +15,10 @@
 .site--content {
   padding: 2rem 1rem;
 
-  .h-entry {
-    &.main {
-      a {
-        &,
-        &:link,
-        &:visited {
-          padding: 2px;
-        }
-
-        &:active,
-        &:focus,
-        &:hover {
-          text-decoration: underline wavy #000;
-          background-color: $background--highlight;
-          color: #000;
-        }
-      }
-    }
-  }
+  // .h-entry {
+  //   &.main {
+  //   }
+  // }
 }
 
 // .site--introduction {
