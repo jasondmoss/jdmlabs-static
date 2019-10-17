@@ -57,9 +57,9 @@
     }
   }
 
-  @media screen and (min-width: 1024px) {
-    grid-template-columns: [col] 25% [col] 25% [col] 25% [col] 25%;
-    grid-template-rows: [row] auto [row] auto [row];
+  @media screen and (min-width: 880px) {
+    // grid-template-columns: [col] 25% [col] 25% [col] 25% [col] 25%;
+    // grid-template-rows: [row] auto [row] auto [row];
   }
 }
 

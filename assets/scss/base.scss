@@ -100,7 +100,8 @@ html {
 }
 
 body {
-  max-width: $width--website-max;
+  // max-width: $width--website-max;
+  max-width: $width--container-max;
   margin-right: auto;
   margin-left: auto;
   background-color: transparent;
@@ -114,13 +115,13 @@ body {
   animation-name: fadeIn;
 }
 
-.site-wrapper {
-  position: relative;
-  width: 100%;
-  max-width: $width--container-max;
-  margin: 0 auto;
-  padding: 0 0.75rem;
-}
+// .site-wrapper {
+//   position: relative;
+//   width: 100%;
+//   max-width: $width--container-max;
+//   margin: 0 auto;
+//   padding: 0 0.75rem;
+// }
 
 img {
   max-width: 100%;
@@ -147,7 +148,7 @@ h1, h2, h3, h4 {
 
 h1 {
   margin: 0;
-  font-size: 1.3rem;
+  font-size: 2rem;
   font-family: $font-family--accent;
 }
 
@@ -157,24 +158,28 @@ h2, h3, h4 {
 
 h3, h4 {
   text-transform: capitalize;
-  font-size: 1rem;
 }
 
 h2 {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-family: $font-family--accent;
 }
 
 h3 {
+  font-size: 1.25rem;
   font-family: $font-family--accent;
 }
 
 h4 {
-  font-size: 1.2rem;
+  font-size: 1.15rem;
 }
 
 p {
   margin: 0 0 1rem;
+}
+
+strong {
+  font-weight: 700;
 }
 
 a {
