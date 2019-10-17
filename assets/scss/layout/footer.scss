@@ -12,10 +12,11 @@
 
 
 .site--footer {
-  background-color: $debug--blue;
+  // background-color: $debug--blue;
 
   .site-credits {
-    padding: 2rem 1rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 
   .site-credits {
@@ -33,6 +34,9 @@
    */
 
   @media screen and (min-width: 880px) {
+    .site-credits {
+      text-align: left;
+    }
   }
 }
 

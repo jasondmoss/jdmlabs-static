@@ -85,7 +85,7 @@ body {
 }
 
 html {
-  overflow-x: hidden;
+  // overflow-x: hidden;
   width: 100%;
   height: 100%;
   background-color: $background--primary;
@@ -254,6 +254,12 @@ a {
 
   h3 {
     font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 880px) {
+  html {
+    background: linear-gradient(90deg, $background--primary 50%, $background--primary-dark 50%);
   }
 }
 

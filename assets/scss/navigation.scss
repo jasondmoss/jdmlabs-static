@@ -35,15 +35,17 @@
 
   a {
     display: inline-block;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
     padding: 1.25rem 0 0.75rem;
 
-    &:not(:first-of-type) {
-      margin-left: 0.5rem;
-    }
+    // &:not(:first-of-type) {
+    //   margin-left: 0.5rem;
+    // }
 
-    &:not(:last-of-type) {
-      margin-right: 0.5rem;
-    }
+    // &:not(:last-of-type) {
+    //   margin-right: 0.5rem;
+    // }
 
     &,
     &:link,
@@ -59,6 +61,32 @@
     &:hover {
       text-decoration: underline wavy;
       color: #fff;
+    }
+  }
+
+
+
+
+  /**
+   * Media Queries.
+   *
+   * ------------------------------------------------------------------------- *
+   */
+
+  /** Min */
+
+  @media screen and (min-width: 411px) {
+    &--main {
+      justify-content: end;
+    }
+  }
+
+  @media screen and (min-width: 880px) {
+    &--ego {
+      justify-content: flex-start;
+      max-width: 50%;
+      margin: 0;
+      padding: 1rem 0.5rem 0;
     }
   }
 }

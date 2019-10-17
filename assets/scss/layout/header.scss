@@ -17,7 +17,7 @@
   align-items: center;
 
   .nameplate {
-    width: 10rem;
+    width: 12rem;
 
     a {
       padding: 0.55rem 0.5rem;
@@ -25,7 +25,7 @@
 
     .u-logo {
       max-width: 2rem;
-      margin: 0 1rem 0 0;
+      margin: 0.25rem 0.5rem 0 -0.25rem;
     }
 
     .org {
@@ -49,12 +49,9 @@
   /** Min */
 
   @media screen and (min-width: 411px) {
-    .nameplate {
-      width: 45%;
-    }
-
+    .nameplate,
     .nav--main {
-      width: 55%;
+      width: 50%;
     }
   }
 }
