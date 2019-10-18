@@ -1,12 +1,7 @@
 <!doctype html>
-<html prefix="xhv: https://www.w3.org/1999/xhtml/vocab#
-  xsd: https://www.w3.org/2001/XMLSchema#
-  rdfs: https://www.w3.org/2000/01/rdf-schema#
-  dc: https://purl.org/dc/terms/
-  vcard: https://www.w3.org/2006/vcard/ns#
-  v: https://rdf.data-vocabulary.org/#
+<html prefix="vcard: https://www.w3.org/2006/vcard/ns#
   article: http://ogp.me/ns/article#
-  website: http://ogp.me/ns/website#" lang="en-CA"><head>
+  website: http://ogp.me/ns/website#" lang="en"><head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>JdmLabs: The Online Laboratory of Jason D. Moss</title>
@@ -51,10 +46,10 @@
   <meta name="twitter:creator" content="@jasondmoss">
   <meta name="twitter:creator:id" content="156621819">
   <meta name="twitter:domain" content="@jasondmoss">
-</head><body itemscope itemtype="https://schema.org/WebPage" class="home"><!-- <div class="site-wrapper"> -->
+</head><body itemscope itemtype="https://schema.org/WebPage" class="home">
 <meta itemprop="lastReviewed" content="2019-10-16T01:37:24.558Z">
 
-<header id="siteHeader" class="site--header">
+<header role="banner" id="siteHeader" class="site--header">
   <h1 itemprop="headline" class="nameplate"><span itemscope itemtype="https://schema.org/Organization">
     <a itemprop="url" rel="bookmark home" href="https://www.jdmlabs.com/" title=" Welcome to JdmLabs ">
       <img itemprop="logo" class="u-logo" src="./assets/images/ui/strata-256x256.png" alt="JdmLabs website logo">
@@ -62,8 +57,8 @@
     </a>
   </span></h1>
 
-  <nav itemscope itemtype="https://schema.org/SiteNavigationElement" id="mainMenu" class="nav nav--main">
-    <h4 class="nav--title">Main Menu</h4>
+  <nav itemscope itemtype="https://schema.org/SiteNavigationElement" role="navigation" id="mainMenu" class="nav nav--main">
+    <h2 class="nav--title">Main Menu</h2>
     <a rel="bookmark" class="nav-link" href="#">Work</a>
     <a rel="bookmark" class="nav-link" href="#siteFooter">Contact</a>
   </nav>
@@ -76,7 +71,7 @@
   <meta itemprop="height" content="853">
 </figure>
 
-<section class="site--introduction">
+<section role="region" aria-label="Introduction" class="site--introduction">
   <header class="entry--header">
     <h2 itemprop="headline" class="entry--title">Hello. I am <strong>Jason D. Moss</strong>, a Web Developer at <strong>JdmLabs</strong>.</h2>
     <h3><a itemprop="relatedLink" rel="external" href="#" title=" Jason D. Moss on Behance ">I handcraft websites</a>.</h3>
@@ -85,7 +80,8 @@
   <div itemprop="mainEntityOfPage" class="entry--content">
     <p>Or, to be more specific, I plan, develop, implement and maintain modern sites and custom applications. From large multi-tiered sites, small single-page applications, custom APIs, to custom modules and plug-ins, I've got you covered.</p>
     <p>I specialize in creating with <a rel="external" href="https://www.drupal.org/" title="Drupal: Open Source CMS">Drupal</a>, <a rel="external" href="https://craftcms.com/" title="Craft is a CMS that&#39;s laser-focused on doing one thing really, really well: managing content.">Craft CMS</a>, <a rel="external" href="https://wordpress.org/" title="WordPress: Blog Tool, Publishing Platform, and CMS">WordPress</a> and countless other tools and solutions (<em><a rel="external" href="https://symfony.com/" title="Symfony: High Performance PHP Framework for Web Development">Symfony</a>, <a rel="external" href="https://laravel.com/" title="Laravel: The PHP framework for web artisans.">Laravel</a>, <a rel="external" href="https://expressionengine.com/" title="ExpressionEngine is a flexible, feature-rich content management platform">ExpressionEngine</a>, <a rel="external" href="https://b2evolution.net/" title="b2evolution CCMS: Content + Community Management System">b2evolution</a>, <a rel="external" href="https://www.shopify.com/" title="Ecommerce Software, Online Store Builder, Website Store Hosting Solution">Shopify</a>, to name a few</em>).</p>
-    <p>Please, <a class="u-email" href="#siteFooter" title=" Send me a note. Don't be shy. ">feel free to contact me</a> if you have any questions, concerns or propositions. I'm always open.</p>
+    <p>If you have any questions, concerns or propositions, please, <a class="u-email" href="#siteFooter" title=" Send me a note. Don't be shy. ">feel free to contact me</a>.</p>
+    <hr>
     <p>Compliant. Portable. Functional.</p>
   </div>
 
@@ -105,13 +101,13 @@
   </footer>
 </section>
 
-<main itemprop="mainContentOfPage" id="siteContent" class="site--content">
+<main itemprop="mainContentOfPage" role="main" aria-label="Work" id="siteContent" class="site--content">
   <h2>MAIN SITE CONTENT</h2>
 </main>
 
-<footer id="siteFooter" class="site--footer">
+<footer role="contentinfo" id="siteFooter" class="site--footer">
   <nav itemscope itemtype="https://schema.org/Organization" id="social" class="nav nav--ego">
-    <h4 class="nav--title">Social Links</h4>
+    <h3 class="nav--title">Social Links</h3>
     <link itemprop="url" href="https://www.jdmlabs.com">
     <a itemprop="email" href="mailto:work@jdmlabs.com" title=" About.me profile "><i class="icon-mail" aria-hidden="true"></i> <span>Email</span></a>
     <a itemprop="sameAs" rel="author external me profile" href="https://github.com/jasondmoss" title=" GitHub profile "><i class="icon-github" aria-hidden="true"></i> <span>GitHub</span></a>
@@ -129,7 +125,6 @@
   </div>
 </footer>
 
-<!-- </div> -->
 <script src="./assets/min/polyfills.js"></script>
 <script src="./assets/min/scripts.js"></script>
 </body></html>
