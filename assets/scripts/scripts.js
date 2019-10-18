@@ -11,6 +11,21 @@
  */
 
 
+/**
+ * Media Query Rules.
+ *
+ * @type  {Boolean}
+ */
+const mobileScreen = window.matchMedia("(max-width:879px)");
+
+/**
+ * Carousel duration.
+ *
+ * @type  {Integer}  Time between slides (milliseconds).
+ */
+const slideDuration = 8192; // 8 seconds
+
+
 (function () {
     "use strict";
 
@@ -30,19 +45,25 @@
 
 
     /**
-     * Scroll to top of page.
+     * Carousel.
      *
-     * @type  {NodeElement}
+     * @type  {NodeList}  slides
+     *
+     * @uses  {Module}  Flickity
      *
      * ----------------------------------------------------------------------- *
      */
-    // let targetLi = document.querySelector(".back-to-top");
-    // if (exists(backToTop)) {
-    //     backToTop.addEventListener("click", (event) => {
-    //         event.stopPropagation();
-    //         event.preventDefault();
-
-    //         smoothScroll(event.target.hash);
+    // let slides = document.querySelector("#test");
+    // if (exists(slides)) {
+    //     new Flickity(slides, {
+    //         cellAlign: "center",
+    //         draggable: true,
+    //         adaptiveHeight: false,
+    //         prevNextButtons: true,
+    //         pageDots: false,
+    //         wrapAround: true,
+    //         autoPlay: slideDuration,
+    //         pauseAutoPlayOnHover: true
     //     });
     // }
 })();

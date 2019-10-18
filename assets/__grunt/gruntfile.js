@@ -72,8 +72,8 @@ module.exports = function (grunt) {
                     ],
                     "../min/scripts.js": [
                         "../scripts/methods.js",
-                        "../scripts/vendor/*.js",
-                        "../scripts/component/*.js",
+                        // "../scripts/vendor/*.js",
+                        // "../scripts/component/*.js",
                         "../scripts/scripts.js"
                     ]
                 }
