@@ -28,8 +28,8 @@
   }
 }
 
-.site--introduction,
-.site--content {
+.site--content,
+.projects {
   a {
     display: inline;
     white-space: break-spaces;
@@ -60,6 +60,9 @@
   }
 }
 
+.projects {
+}
+
 
 
 
@@ -72,8 +75,8 @@
 /* Min */
 
 @media screen and (min-width: 550px) {
-  .site--introduction,
-  .site--content {
+  .site--content,
+  .projects {
     hr {
       width: 6rem;
       margin-right: 0;

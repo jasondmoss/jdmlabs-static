@@ -18,15 +18,15 @@ body {
 
   .site--header,
   .site--primary-image,
-  .site--introduction,
   .site--content,
+  .projects,
   .site--footer {
     padding-right: 5%;
     padding-left: 5%;
   }
 
-  .site--introduction,
-  .site--content {
+  .site--content,
+  .projects {
     padding-top: 2rem;
     padding-bottom: 2rem;
   }
@@ -46,8 +46,8 @@ body {
 
     .site--header,
     .site--primary-image,
-    .site--introduction,
-    .site--content {
+    .site--content,
+    .projects {
       padding-right: 7%;
     }
 
@@ -66,11 +66,11 @@ body {
       align-self: start;
     }
 
-    .site--introduction {
+    .site--content {
       grid-column: col 1 / span 2;
     }
 
-    .site--content {
+    .projects {
       grid-column: col 1 / span 2;
       grid-row: row 3;
     }
