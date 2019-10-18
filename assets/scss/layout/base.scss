@@ -47,9 +47,13 @@ body {
     .site--header,
     .site--primary-image,
     .site--introduction,
-    .site--content,
-    .site--footer {
+    .site--content {
       padding-right: 7%;
+    }
+
+    .site--footer {
+      padding-right: 3%;
+      padding-left: 2%;
     }
 
     .site--header {
@@ -72,7 +76,7 @@ body {
     }
 
     .site--footer {
-      grid-column: col 1 / span 2;
+      grid-column: col 1 / span 4;
       grid-row: row 4;
     }
   }

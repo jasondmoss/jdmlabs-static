@@ -12,16 +12,21 @@
 
 
 .site--footer {
-  // background-color: $background--primary;
+  display: flex;
+  align-content: flex-start;
 
   .site-credits {
+    display: inline-block;
+    width: 100%;
     padding-top: 2rem;
     padding-bottom: 2rem;
-  }
-
-  .site-credits {
     text-align: center;
     font-size: 0.85rem;
+
+    .back-to-top {
+      display: block;
+      text-align: center;
+    }
   }
 
 
@@ -34,8 +39,18 @@
    */
 
   @media screen and (min-width: 880px) {
+    flex-flow: wrap-reverse;
+
     .site-credits {
-      text-align: left;
+      width: 50%;
+      margin-left: 5%;
+      padding-left: 5%;
+      text-align: right;
+
+      .back-to-top {
+        margin-top: 2rem;
+        text-align: right;
+      }
     }
   }
 }
