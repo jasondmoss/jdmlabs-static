@@ -21,8 +21,8 @@ body {
   .site--introduction,
   .site--content,
   .site--footer {
-    padding-right: 1rem;
-    padding-left: 1rem;
+    padding-right: 5%;
+    padding-left: 5%;
   }
 
   .site--introduction,
@@ -43,6 +43,14 @@ body {
   @media screen and (min-width: 880px) {
     grid-template-columns: [col] 25% [col] 25% [col] 25% [col] 25%;
     grid-template-rows: [row] auto [row] auto [row] auto [row] auto;
+
+    .site--header,
+    .site--primary-image,
+    .site--introduction,
+    .site--content,
+    .site--footer {
+      padding-right: 7%;
+    }
 
     .site--header {
       grid-column: col 1 / span 2;

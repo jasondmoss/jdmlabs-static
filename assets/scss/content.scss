@@ -30,44 +30,35 @@
 
 .site--introduction,
 .site--content {
-  .h-entry {
-    &.main {
-      a {
-        display: inline;
-        white-space: break-spaces;
+  a {
+    display: inline;
+    white-space: break-spaces;
 
-        &,
-        &:link,
-        &:visited {
-          padding: 2px;
-        }
+    &,
+    &:link,
+    &:visited {
+      padding: 2px;
+      border-bottom: 2px solid transparent;
+    }
 
-        &:active,
-        &:focus,
-        &:hover {
-          text-decoration: underline wavy #000;
-          background-color: $background--highlight;
-          color: #000;
-        }
-      }
+    &:active,
+    &:focus,
+    &:hover {
+      text-decoration: underline #000;
+      border-bottom-color: $background--primary-dark;
+      background-color: $background--highlight;
+      color: #000;
     }
   }
 
   hr {
-    width: 4rem;
+    width: 25%;
     height: 0.25rem;
-    margin: 1rem 0;
+    margin: 1rem 37.5% 1.5rem;
     border: 0;
     border-bottom: 0.25rem solid $background--primary-light;
   }
 }
-
-// .site--introduction {
-
-// }
-
-// .site--content {
-// }
 
 
 
@@ -77,6 +68,19 @@
  *
  * --------------------------------------------------------------------------- *
  */
+
+/* Min */
+
+@media screen and (min-width: 550px) {
+  .site--introduction,
+  .site--content {
+    hr {
+      width: 6rem;
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+}
 
 @media screen and (min-width: 880px) {
   .site--primary-image {

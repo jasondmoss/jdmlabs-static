@@ -23,7 +23,7 @@
      *
      * ----------------------------------------------------------------------- *
      */
-    let allLinks = document.querySelectorAll(".site--introduction a,.site--content a");
+    let allLinks = document.querySelectorAll("a");
     if (exists(allLinks)) {
         ContentLinks(allLinks);
     }
@@ -36,15 +36,15 @@
      *
      * ----------------------------------------------------------------------- *
      */
-    let backToTop = document.querySelector(".back-to-top");
-    if (exists(backToTop)) {
-        backToTop.addEventListener("click", function (event) {
-            event.stopPropagation();
-            event.preventDefault();
+    // let targetLi = document.querySelector(".back-to-top");
+    // if (exists(backToTop)) {
+    //     backToTop.addEventListener("click", (event) => {
+    //         event.stopPropagation();
+    //         event.preventDefault();
 
-            smoothScroll(event.target.hash);
-        });
-    }
+    //         smoothScroll(event.target.hash);
+    //     });
+    // }
 })();
 
 /* <> */

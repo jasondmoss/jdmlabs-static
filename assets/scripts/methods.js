@@ -83,52 +83,39 @@ function smoothScroll(target)
  *
  * @method  {ContentLinks}
  */
-const ContentLinks = function (links) {
+const ContentLinks = (links) => {
     "use strict";
 
     if (!exists(links)) {
         return false;
     }
 
-    links.forEach(function (link) {
+    links.forEach((link) => {
         let isInternal = false;
         let isButton = false;
         let isDownload = false;
-        let isMail = false;
-        let isPhone = false;
         let isSocial = false;
-        let isStore = false;
 
         let href = link.getAttribute("href");
         if (!exists(href)) {
             return false;
         }
 
-        isInternal = (href.includes("spectacularnwt.", 0) && !href.startsWith("https://webstore.")) ||
-            href.includes("tnospectaculaire.", 0) ||
-            href.includes("ub9.outcrop.com", 0) ||
-            href.startsWith("node/") ||
-            href.startsWith("/") ||
-            href.startsWith("?") ||
-            href.startsWith("#");
+        isInternal = href.includes("jdmlabs", 0) || href.startsWith("#");
         isDownload = link.classList.contains("file-link");
-        isMail = href.startsWith("mailto:");
-        isPhone = href.startsWith("tel:");
-        isSocial = href.includes("facebook.com") ||
-            href.includes("instagram.com") ||
+        isSocial = href.includes("about.me") ||
+            href.includes("behance.net") ||
+            href.includes("github.com") ||
+            href.includes("last.fm") ||
             href.includes("linkedin.com") ||
-            href.includes("tripadvisor.ca") ||
             href.includes("twitter.com") ||
             href.includes("vimeo.com") ||
-            href.includes("wechat.com") ||
-            href.includes("weibo.com") ||
-            href.includes("youtube.com") || href.includes("youtu.be");
-        isStore = href.startsWith("https://webstore.");
+            href.includes("youtube.com");
 
         let linkRole = link.getAttribute("role");
         isButton = linkRole === "button";
 
-        if (!isInternal && !isButton && !isDownload && !isMail && !isPhone & !isSocial && !isStore) {
+        if (!isInternal && !isButton && !isDownload && !isSocial) {
             /**
              * Is an external link, but not a store link, email address, nor
              * mobile phone number.
@@ -137,7 +124,7 @@ const ContentLinks = function (links) {
             /**
              * Append an `external` icon to signify the link's externality.
              */
-            let extIcon = document.createElement("span");
+            let extIcon = document.createElement("i");
             extIcon.classList.add("icon-link-ext");
             link.appendChild(extIcon);
 
@@ -145,7 +132,7 @@ const ContentLinks = function (links) {
              * Open external link in new tab/window.
              */
             newWindowAnchor(link);
-        } else if (!isInternal && !isDownload && (isButton || isSocial || isStore)) {
+        } else if (!isInternal && !isDownload && (isButton || isSocial)) {
             /**
              * Is external, also buttons and a store link: no external icon.
              */
@@ -158,9 +145,14 @@ const ContentLinks = function (links) {
 
             if (isButton) {
                 link.setAttribute("role", "button");
-            }/* else {
-                link.setAttribute("role", "link");
-            }*/
+            }
+        } else if (isInternal && href.startsWith("#")) {
+            link.addEventListener("click", (event) => {
+                event.stopPropagation();
+                event.preventDefault();
+
+                smoothScroll(event.target.hash);
+            });
         } else if (isDownload) {
             /**
              * Download button.
@@ -169,7 +161,7 @@ const ContentLinks = function (links) {
                 /**
                  * Append an `download` icon to signify file download.
                  */
-                let dlIcon = document.createElement("span");
+                let dlIcon = document.createElement("i");
                 dlIcon.classList.add("icon-download");
                 link.appendChild(dlIcon);
             }
@@ -178,7 +170,7 @@ const ContentLinks = function (links) {
                 /**
                  * Append an `external` icon to signify the link's externality.
                  */
-                let extIcon = document.createElement("span");
+                let extIcon = document.createElement("i");
                 extIcon.classList.add("icon-link-ext");
                 link.appendChild(extIcon);
             }
@@ -192,23 +184,7 @@ const ContentLinks = function (links) {
              * Normal internal link.
              */
             link.setAttribute("rel", "bookmark");
-            // link.setAttribute("role", "link");
         }
-
-        /**
-         * Is an email address: append an `email` icon.
-         */
-        if (isMail) {
-            let mailIcon = document.createElement("span");
-            mailIcon.classList.add("icon-mail");
-            link.appendChild(mailIcon);
-        }
-
-        /**
-         * For Mobile link treatments...
-         *
-         * @see  {Method}  MobileNumber
-         */
     });
 };
 

@@ -1,5 +1,5 @@
 /**
- * jdmlabs v13.0.0 [2019-10-17]
+ * jdmlabs v13.0.0 [2019-10-18]
  *
  * The homepage of Jason D. Moss, a PHP + Front-End Developer at JdmLabs, specializing in handcrafted solutions. Compliant. Portable. Functional.
  *

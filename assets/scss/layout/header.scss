@@ -17,8 +17,6 @@
   align-items: center;
 
   .nameplate {
-    width: 12rem;
-
     a {
       padding: 0.55rem 0.5rem;
     }
@@ -49,9 +47,18 @@
   /** Min */
 
   @media screen and (min-width: 411px) {
-    .nameplate,
+    .nameplate {
+      width: 47%
+    }
+
     .nav--main {
-      width: 50%;
+      width: 53%;
+    }
+  }
+
+  @media screen and (min-width: 880px) {
+    .nav--main {
+      margin-right: -3%;
     }
   }
 }
