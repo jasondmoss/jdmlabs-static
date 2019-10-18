@@ -42,30 +42,29 @@ body {
 
   @media screen and (min-width: 880px) {
     grid-template-columns: [col] 25% [col] 25% [col] 25% [col] 25%;
-    grid-template-rows: [row] auto [row] auto [row] auto [row];
+    grid-template-rows: [row] auto [row] auto [row] auto [row] auto;
 
     .site--header {
-      grid-column: col / span 2;
+      grid-column: col 1 / span 2;
     }
 
     .site--primary-image {
       grid-column: col 3 / span 2;
-      grid-row: row / span 2;
+      grid-row: row / span 4;
       align-self: start;
     }
 
     .site--introduction {
-      grid-column: col / span 2;
+      grid-column: col 1 / span 2;
     }
 
     .site--content {
-      grid-column: col / span 4;
+      grid-column: col 1 / span 2;
       grid-row: row 3;
-      background-color: $background--primary;
     }
 
     .site--footer {
-      grid-column: col / span 4;
+      grid-column: col 1 / span 2;
       grid-row: row 4;
     }
   }
