@@ -20,9 +20,9 @@ LimitRequestBody 10240000
 ### Deny directory listing.
 Options -Indexes
 
-<Directory "/scratch">
-  Deny from all
-</Directory>
+# <Directory "/scratch">
+#   Deny from all
+# </Directory>
 
 ### Etag for multiple servers better FileETag None.
 FileETag MTime Size
