@@ -1,0 +1,105 @@
+@charset "UTF-8";
+
+/**
+ * Site Footer
+ *
+ * @category   Stylesheet
+ * @package    JDMLABS
+ * @author     Jason D. Moss <jason@jdmlabs.com>
+ * @copyright  2005-2019 Jason D. Moss. All rights freely given.
+ * @link       https://www.jdmlabs.com/
+ */
+
+
+.site--footer {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: end;
+  padding-bottom: 2rem;
+  background-color: $background--primary-dark;
+
+  .site-credits {
+    order: 1;
+    display: inline-block;
+    width: 100%;
+    // padding-top: 2rem;
+    padding-bottom: 0.5rem;
+    text-align: center;
+    font-size: 0.85rem;
+  }
+
+  .nav {
+    order: 0;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+
+    &--title {
+      @extend .reader;
+    }
+
+    &--ego {
+      display: flex;
+      flex-flow: row wrap;
+      align-content: end;
+    }
+
+    a {
+      display: inline-block;
+      margin-top: 0.5rem;
+      padding: 0.5rem 1rem;
+
+      &,
+      &:link,
+      &:visited {
+        i {
+          padding-right: 0.25rem;
+          color: #fff;
+        }
+      }
+
+      &:active,
+      &:focus,
+      &:hover {
+        background-color: $background--primary-dark;
+        text-decoration: none;
+        color: #fff;
+      }
+    }
+  }
+
+
+
+
+  /**
+   * Media Queries.
+   *
+   * ------------------------------------------------------------------------- *
+   */
+
+  @media screen and (min-width: 880px) {
+    background-color: transparent;
+
+    .site-credits {
+      order: 0;
+      width: 50%;
+    }
+
+    .nav--ego {
+      order: 1;
+      justify-content: flex-end;
+      max-width: 50%;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  @media screen and (min-width: 1265px) {
+    .nav--ego {
+      justify-content: flex-start;
+      padding-left: 5%;
+    }
+  }
+}
+
+/* <> */

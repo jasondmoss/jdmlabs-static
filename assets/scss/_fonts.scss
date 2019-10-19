@@ -22,8 +22,8 @@
   font-style: normal;
   font-weight: 400;
   src: local("Fira Sans Regular"), local("FiraSans-Regular"),
-       url("../fonts/fira-sans/fira-sans-v10-latin-regular.woff2") format("woff2"),
-       url("../fonts/fira-sans/fira-sans-v10-latin-regular.woff") format("woff");
+    url("../fonts/fira-sans/fira-sans-v10-latin-regular.woff2") format("woff2"),
+    url("../fonts/fira-sans/fira-sans-v10-latin-regular.woff") format("woff");
 }
 
 // @font-face {
@@ -31,8 +31,8 @@
 //   font-style: normal;
 //   font-weight: 700;
 //   src: local("Fira Sans Bold"), local("FiraSans-Bold"),
-//        url("../fonts/fira-sans/fira-sans-v10-latin-700.woff2") format("woff2"),
-//        url("../fonts/fira-sans/fira-sans-v10-latin-700.woff") format("woff");
+//     url("../fonts/fira-sans/fira-sans-v10-latin-700.woff2") format("woff2"),
+//     url("../fonts/fira-sans/fira-sans-v10-latin-700.woff") format("woff");
 // }
 
 
@@ -48,8 +48,8 @@
   font-style: normal;
   font-weight: normal;
   src: local("Fontello"),
-       url("../fonts/fontello/fontello.woff2") format("woff2"),
-       url("../fonts/fontello/fontello.woff") format("woff");
+    url("../fonts/fontello/fontello.woff2") format("woff2"),
+    url("../fonts/fontello/fontello.woff") format("woff");
 }
 
 [class^="icon-"]::before,
@@ -68,14 +68,15 @@
   font-family: "fontello";
   speak: none;
 
+  -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-   -moz-osx-font-smoothing: grayscale;
 }
 
 .icon-aboutme::before {  content: "\e800"; }
 .icon-behance::before {  content: "\f1b4"; }
 .icon-github::before {   content: "\f09b"; }
 .icon-lastfm::before {   content: "\f202"; }
+.icon-link-ext::before { content: "\f08e"; }
 .icon-linkedin::before { content: "\f0e1"; }
 .icon-mail::before {     content: "\e801"; }
 .icon-twitter::before {  content: "\f099"; }

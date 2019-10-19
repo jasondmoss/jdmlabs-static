@@ -65,26 +65,16 @@ img {
   display: inline-block;
 }
 
-// article,
-// div,
-// footer,
-// header,
-// html,
-// nav,
-// nav a,
-// p,
-// section {
-//   display: block;
-// }
-
 html,
 body {
   position: relative;
+  height: 100%;
   margin: 0;
   padding: 0;
 }
 
 html {
+  width: 100%;
   background-color: $background--primary;
   font-style: normal;
   font-weight: 400;

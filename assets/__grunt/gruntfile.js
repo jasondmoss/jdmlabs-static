@@ -71,7 +71,7 @@ module.exports = function (grunt) {
                         "../scripts/polyfill/*.js"
                     ],
                     "../min/scripts.js": [
-                        "../scripts/methods.js",
+                        // "../scripts/methods.js",
                         // "../scripts/vendor/*.js",
                         // "../scripts/component/*.js",
                         "../scripts/scripts.js"
@@ -144,7 +144,6 @@ module.exports = function (grunt) {
             scripts: {
                 files: ["../scripts/**/*.js"],
                 tasks: ["jshint", "uglify", "usebanner"]
-                // tasks: ["jshint", "usebanner"] // For debugging purposes.
             }
         }
     });

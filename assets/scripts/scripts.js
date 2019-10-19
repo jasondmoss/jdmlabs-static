@@ -12,18 +12,54 @@
 
 
 /**
- * Media Query Rules.
+ * Has (Object|Node) been defined? Does (Object|Node) exist?
  *
- * @type  {Boolean}
+ * @param  {NodeElement}  thing  Element to test.
+ *
+ * @return  {Boolean}  True or false
+ * @method  exists
  */
-const mobileScreen = window.matchMedia("(max-width:879px)");
+function exists(thing)
+{
+    "use strict";
+
+    if (typeof thing === "undefined" || thing === null || thing === false || thing.length < 1) {
+        return false;
+    }
+
+    return true;
+}
+
 
 /**
- * Carousel duration.
+ * Securely open a new window from given anchor element.
  *
- * @type  {Integer}  Time between slides (milliseconds).
+ * @param  {NodeElement}  anchor
+ *
+ * @method  newWindowAnchor
+ *
+ * @see  https://developer.mozilla.org/en-US/docs/Web/API/Window/open
  */
-const slideDuration = 8192; // 8 seconds
+function newWindowAnchor(anchor)
+{
+    "use strict";
+
+    if (!exists(anchor)) {
+        return false;
+    }
+
+    anchor.setAttribute("rel", "noopener noreferrer");
+    anchor.addEventListener("click", function (event) {
+        event.preventDefault();
+
+        let targetUrl = anchor.getAttribute("href");
+        // let newWindow = window.open(targetUrl, "_blank");
+        // newWindow.opener = null;
+        window.open(targetUrl, "_blank");
+
+        return false;
+    });
+}
 
 
 (function () {
@@ -40,32 +76,38 @@ const slideDuration = 8192; // 8 seconds
      */
     let allLinks = document.querySelectorAll("a");
     if (exists(allLinks)) {
-        ContentLinks(allLinks);
+        allLinks.forEach(function (link) {
+            let isInternal = false;
+            let isSocial = false;
+
+            let href = link.getAttribute("href");
+            if (!exists(href)) {
+                return false;
+            }
+
+            isInternal = href.includes("jdmlabs", 0) || href.startsWith("#");
+            isSocial = href.includes("about.me") ||
+                href.includes("behance.net") ||
+                href.includes("github.com") ||
+                href.includes("last.fm") ||
+                href.includes("linkedin.com") ||
+                href.includes("twitter.com") ||
+                href.includes("vimeo.com") ||
+                href.includes("youtube.com");
+
+            if ((!isInternal && !isSocial) || (!isInternal && isSocial)) {
+                /**
+                 * Is an external social link: no external icon.
+                 */
+                newWindowAnchor(link);
+            } else {
+                /**
+                 * Normal internal link.
+                 */
+                link.setAttribute("rel", "bookmark");
+            }
+        });
     }
-
-
-    /**
-     * Carousel.
-     *
-     * @type  {NodeList}  slides
-     *
-     * @uses  {Module}  Flickity
-     *
-     * ----------------------------------------------------------------------- *
-     */
-    // let slides = document.querySelector("#test");
-    // if (exists(slides)) {
-    //     new Flickity(slides, {
-    //         cellAlign: "center",
-    //         draggable: true,
-    //         adaptiveHeight: false,
-    //         prevNextButtons: true,
-    //         pageDots: false,
-    //         wrapAround: true,
-    //         autoPlay: slideDuration,
-    //         pauseAutoPlayOnHover: true
-    //     });
-    // }
 })();
 
 /* <> */

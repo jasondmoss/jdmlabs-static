@@ -19,14 +19,12 @@ body {
   .site--header,
   .site--primary-image,
   .site--content,
-  .projects,
   .site--footer {
     padding-right: 1rem;
     padding-left: 1rem;
   }
 
-  .site--content,
-  .projects {
+  .site--content {
     padding-top: 2rem;
     padding-bottom: 2rem;
   }
@@ -42,17 +40,12 @@ body {
 
   @media screen and (min-width: 880px) {
     grid-template-columns: [col] 25% [col] 25% [col] 25% [col] 25%;
-    grid-template-rows: [row] auto [row] auto [row] auto [row] auto;
+    grid-template-rows: [row] auto [row] auto [row] auto;
 
     .site--header,
     .site--primary-image,
     .site--content {
       padding-right: 7%;
-    }
-
-    .site--footer {
-      padding-right: 2rem;
-      padding-left: 1rem;
     }
 
     .site--header {
@@ -61,7 +54,7 @@ body {
 
     .site--primary-image {
       grid-column: col 3 / span 2;
-      grid-row: row / span 4;
+      grid-row: row / span 3;
       align-self: start;
     }
 
@@ -69,14 +62,9 @@ body {
       grid-column: col 1 / span 2;
     }
 
-    .projects {
-      grid-column: col 1 / span 4;
-      grid-row: row 3;
-    }
-
     .site--footer {
       grid-column: col 1 / span 4;
-      grid-row: row 4;
+      grid-row: row 3;
     }
   }
 }
