@@ -21,8 +21,8 @@ body {
   .site--content,
   .projects,
   .site--footer {
-    padding-right: 5%;
-    padding-left: 5%;
+    padding-right: 1rem;
+    padding-left: 1rem;
   }
 
   .site--content,
@@ -46,14 +46,13 @@ body {
 
     .site--header,
     .site--primary-image,
-    .site--content,
-    .projects {
+    .site--content {
       padding-right: 7%;
     }
 
     .site--footer {
-      padding-right: 3%;
-      padding-left: 2%;
+      padding-right: 2rem;
+      padding-left: 1rem;
     }
 
     .site--header {
