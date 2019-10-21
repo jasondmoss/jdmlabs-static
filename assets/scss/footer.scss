@@ -19,17 +19,14 @@
   background-color: $background--primary-dark;
 
   .site-credits {
-    order: 1;
     display: inline-block;
     width: 100%;
-    // padding-top: 2rem;
     padding-bottom: 0.5rem;
     text-align: center;
     font-size: 0.85rem;
   }
 
   .nav {
-    order: 0;
     justify-content: center;
     margin-top: 2rem;
     margin-bottom: 3rem;
@@ -81,23 +78,21 @@
     background-color: transparent;
 
     .site-credits {
-      order: 0;
       width: 50%;
+      text-align: right;
     }
 
     .nav--ego {
-      order: 1;
-      justify-content: flex-end;
+      justify-content: flex-start;
       max-width: 50%;
-      margin-top: 0;
-      margin-bottom: 0;
+      margin: 0 0 0 -0.5rem;
     }
   }
 
   @media screen and (min-width: 1265px) {
     .nav--ego {
-      justify-content: flex-start;
-      padding-left: 5%;
+      margin-left: -1rem;
+      padding-right: 5%;
     }
   }
 }

@@ -20,7 +20,7 @@
 {
   $next: breakpoint-next($name, $breakpoints);
 
-  @return if($next, breakpoint-min($next, $breakpoints) - .02, null);
+  @return if($next, breakpoint-min($next, $breakpoints) - 0.02, null);
 }
 
 
@@ -48,54 +48,6 @@
     }
   } @else {
     @content;
-  }
-}
-
-
-@mixin display-grid
-{
-  display: grid;
-  grid-template-rows: auto;
-  grid-gap: 1.5em;
-}
-
-
-/* -- */
-
-
-%grid-helpers-base {
-  @include media-breakpoint-up(md) {
-    @include display-grid;
-
-    grid-template-columns: 1fr;
-  }
-}
-
-.cols-2 {
-  @extend %grid-helpers-base;
-  @include media-breakpoint-up(md) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-.cols-3 {
-  @extend %grid-helpers-base;
-  @include media-breakpoint-up(md) {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-.cols-4 {
-  @extend %grid-helpers-base;
-  @include media-breakpoint-up(md) {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-.cols-auto-fit {
-  @extend %grid-helpers-base;
-  @include media-breakpoint-up(md) {
-    grid-template-columns: repeat(auto-fit, minmax(15.625em, 1fr));
   }
 }
 

@@ -12,9 +12,10 @@
 
 
 .site--header {
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
+  // display: flex;
+  // flex-flow: row wrap;
+  // align-items: center;
+  text-align: center;
 
   .nameplate {
     margin-right: auto;
@@ -57,7 +58,8 @@
   /** Min */
 
   @media screen and (min-width: 411px) {
-    align-items: flex-start;
+    // align-items: flex-start;
+    text-align: left;
 
     .nameplate {
       width: 47%;

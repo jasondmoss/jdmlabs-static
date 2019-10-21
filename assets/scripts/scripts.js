@@ -53,8 +53,6 @@ function newWindowAnchor(anchor)
         event.preventDefault();
 
         let targetUrl = anchor.getAttribute("href");
-        // let newWindow = window.open(targetUrl, "_blank");
-        // newWindow.opener = null;
         window.open(targetUrl, "_blank");
 
         return false;
@@ -85,7 +83,7 @@ function newWindowAnchor(anchor)
                 return false;
             }
 
-            isInternal = href.includes("jdmlabs", 0) || href.startsWith("#");
+            isInternal = href.includes("jdmlabs.com", 0) || href.startsWith("#");
             isSocial = href.includes("about.me") ||
                 href.includes("behance.net") ||
                 href.includes("github.com") ||
@@ -97,12 +95,12 @@ function newWindowAnchor(anchor)
 
             if ((!isInternal && !isSocial) || (!isInternal && isSocial)) {
                 /**
-                 * Is an external social link: no external icon.
+                 * External link.
                  */
                 newWindowAnchor(link);
             } else {
                 /**
-                 * Normal internal link.
+                 * Internal link.
                  */
                 link.setAttribute("rel", "bookmark");
             }

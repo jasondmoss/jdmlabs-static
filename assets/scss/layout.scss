@@ -12,14 +12,12 @@
 
 
 body {
-  @include display-grid;
-  grid-template-columns: 1fr;
-  grid-gap: 0;
-
   .site--header,
   .site--primary-image,
   .site--content,
   .site--footer {
+    width: 100%;
+    float: left;
     padding-right: 1rem;
     padding-left: 1rem;
   }
@@ -27,6 +25,21 @@ body {
   .site--content {
     padding-top: 2rem;
     padding-bottom: 2rem;
+  }
+
+  @supports (display: grid) {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-gap: 0;
+
+    .site--header,
+    .site--primary-image,
+    .site--content,
+    .site--footer {
+      float: unset;
+      width: auto;
+    }
   }
 
 
@@ -39,32 +52,47 @@ body {
    */
 
   @media screen and (min-width: 880px) {
-    grid-template-columns: [col] 25% [col] 25% [col] 25% [col] 25%;
-    grid-template-rows: [row] auto [row] auto [row] auto;
-
     .site--header,
     .site--primary-image,
     .site--content {
+      width: 50%;
       padding-right: 7%;
     }
 
-    .site--header {
-      grid-column: col 1 / span 2;
-    }
-
     .site--primary-image {
-      grid-column: col 3 / span 2;
-      grid-row: row / span 3;
-      align-self: start;
+      float: right;
     }
 
-    .site--content {
-      grid-column: col 1 / span 2;
-    }
+    @supports (display: grid) {
+      grid-template-columns: [col] 25% [col] 25% [col] 25% [col] 25%;
+      grid-template-rows: [row] auto [row] auto [row] auto;
 
-    .site--footer {
-      grid-column: col 1 / span 4;
-      grid-row: row 3;
+      .site--header,
+      .site--primary-image,
+      .site--content,
+      .site--footer {
+        width: auto;
+      }
+
+      .site--header {
+        grid-column: col 1 / span 2;
+      }
+
+      .site--primary-image {
+        grid-column: col 3 / span 2;
+        grid-row: row / span 3;
+        align-self: start;
+        float: unset;
+      }
+
+      .site--content {
+        grid-column: col 1 / span 2;
+      }
+
+      .site--footer {
+        grid-column: col 1 / span 4;
+        grid-row: row 3;
+      }
     }
   }
 }
