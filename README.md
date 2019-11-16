@@ -1,2 +1,2 @@
 # JdmLabs
-Personal website
+JdmLabs: The Online Laboratory of Jason D. Moss
