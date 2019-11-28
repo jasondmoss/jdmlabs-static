@@ -57,7 +57,8 @@
     &:focus,
     &:hover {
       border-bottom-color: $background--primary-dark;
-      background-color: $background--highlight;
+      // background-color: $background--highlight;
+      background-color: $color--anchor;
       color: #000;
 
       span {
