@@ -49,19 +49,57 @@
       &,
       &:link,
       &:visited {
+        border-bottom-color: transparent;
+
         i {
           padding-right: 0.25rem;
           color: #fff;
         }
+
+        // .icon-link-ext,
+        // .icon-mail {
+        //   color: #fff;
+        // }
       }
 
       &:active,
       &:focus,
       &:hover {
-        background-color: $background--primary-dark;
-        text-decoration: none;
-        color: #fff;
+        border-bottom-color: $background--primary-dark;
+        // background-color: $background--highlight;
+        background-color: $color--anchor;
+        color: #000;
+
+        span {
+          text-decoration: underline #000;
+        }
+
+        i {
+          color: #000;
+        }
+
+        // .icon-link-ext,
+        // .icon-mail {
+        //   color: #000;
+        // }
       }
+
+      // &,
+      // &:link,
+      // &:visited {
+      //   i {
+      //     padding-right: 0.25rem;
+      //     color: #fff;
+      //   }
+      // }
+
+      // &:active,
+      // &:focus,
+      // &:hover {
+      //   background-color: $background--primary-dark;
+      //   text-decoration: none;
+      //   color: #fff;
+      // }
     }
   }
 
