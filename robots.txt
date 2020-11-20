@@ -1,0 +1,6 @@
+User-agent: *
+Allow: *.html$
+Disallow: /.*/
+Disallow: /_files/
+Disallow: /scratch/
+Sitemap: https://www.jdmlabs.com/sitemap.xml
