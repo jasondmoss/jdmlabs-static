@@ -1,3 +1,5 @@
+// jshint esversion: 9
+
 /**
  * Site Scripts.
  *
@@ -6,18 +8,16 @@
  * @author     Jason D. Moss <jason@jdmlabs.com>
  * @copyright  2005-2019 Jason D. Moss. All rights freely given.
  * @link       https://www.jdmlabs.com/
- *
- * jshint esversion: 6
  */
 
 
 /**
  * Has (Object|Node) been defined? Does (Object|Node) exist?
  *
- * @param  {NodeElement}  thing  Element to test.
+ * @param {NodeElement} thing Element to test.
  *
- * @return  {Boolean}  True or false
- * @method  exists
+ * @return {Boolean} True or false
+ * @method exists
  */
 function exists(thing)
 {
@@ -34,75 +34,64 @@ function exists(thing)
 /**
  * Securely open a new window from given anchor element.
  *
- * @param  {NodeElement}  anchor
+ * @param {NodeElement} anchor
  *
- * @method  newWindowAnchor
- *
- * @see  https://developer.mozilla.org/en-US/docs/Web/API/Window/open
+ * @method newWindowAnchor
  */
 function newWindowAnchor(anchor)
 {
     "use strict";
 
-    if (!exists(anchor)) {
-        return false;
-    }
-
     anchor.setAttribute("rel", "noopener noreferrer");
-    anchor.addEventListener("click", function (event) {
+    anchor.addEventListener("click", (event) => {
         event.preventDefault();
 
         let targetUrl = anchor.getAttribute("href");
-        window.open(targetUrl, "_blank");
+        let newWindow = window.open(targetUrl, "_blank");
 
-        return false;
+        /**
+         * Sever the reference of the new tab/window from the parent.
+         *
+         * @see https://developer.mozilla.org/en-US/docs/Web/API/Window/opener
+         */
+        newWindow.opener = null;
     });
 }
 
 
-(function () {
+(() => {
     "use strict";
 
     /**
-     * Links (Internal vs. External).
+     * Open external links in new tab/window.
      *
-     * @type  {NodeList}  allLinks
-     *
-     * @uses  {Method}  ContentLinks
-     *
-     * ----------------------------------------------------------------------- *
+     * @param {Array|NodeList} links
      */
-    let allLinks = document.querySelectorAll("a");
-    if (exists(allLinks)) {
-        allLinks.forEach(function (link) {
-            let isInternal = false;
-            let isSocial = false;
+    let links = document.querySelectorAll("a");
+    if (exists(links)) {
+        Array.from(links).forEach((link) => {
+            const href = link.getAttribute("href");
+            const rel = link.getAttribute("rel");
 
-            let href = link.getAttribute("href");
             if (!exists(href)) {
                 return false;
             }
 
-            isInternal = href.includes("jdmlabs.com", 0) || href.startsWith("#");
-            isSocial = href.includes("about.me") ||
-                href.includes("behance.net") ||
-                href.includes("github.com") ||
-                href.includes("last.fm") ||
-                href.includes("linkedin.com") ||
-                href.includes("twitter.com") ||
-                href.includes("vimeo.com") ||
-                href.includes("youtube.com");
+            /**
+             * isExternal.
+             *
+             * @type {Boolean}
+             */
+            let isExternal = !(
+                href.startsWith("/") || href.startsWith("?") || href.startsWith("#") ||
+                href.includes("jdmlabs.com")
+            ) ||
+                // Flagged as external.
+                (exists(rel) ? rel.includes("external") : false);
 
-            if ((!isInternal && !isSocial) || (!isInternal && isSocial)) {
-                /**
-                 * External link.
-                 */
+            if (isExternal) {
+                // Securely open external link in new tab/window.
                 newWindowAnchor(link);
-            } else {
-                /**
-                 * Internal link.
-                 */
-                link.setAttribute("rel", "bookmark");
             }
         });
     }

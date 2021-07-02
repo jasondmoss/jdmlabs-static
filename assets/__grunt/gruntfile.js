@@ -1,10 +1,12 @@
+// jshint esversion: 9
+
 /**
  * Grunt tasks configuration file.
  *
  * @link http://gruntjs.com/
  */
 
-module.exports = function (grunt) {
+module.exports = (grunt) => {
     grunt.initConfig({
 
         /**
@@ -38,12 +40,14 @@ module.exports = function (grunt) {
          * @link https://github.com/gruntjs/grunt-contrib-jshint
          */
         jshint: {
-            files: ["gruntfile.js", "../scripts/**/*.js"],
+            files: [ "gruntfile.js", "../scripts/**/*.js" ],
             options: {
                 jshintrc: true,
                 globals: {
                     window: false,
-                    document: false
+                    document: false,
+                    $: false,
+                    jQuery: false
                 },
                 validthis: true
             }
@@ -58,18 +62,17 @@ module.exports = function (grunt) {
         uglify: {
             options: {
                 mangle: false,
+                compress: true,
                 sourceMap: true,
-                sourceMapIncludeSources: true
+                sourceMapName: "../min/jdmlabs.js.map",
+                output: {
+                    comments: false,
+                    quote_style: 2
+                }
             },
 
             public: {
-                options: {
-                    sourceMapName: "../min/scripts.js.map"
-                },
                 files: {
-                    "../min/polyfills.js": [
-                        "../scripts/polyfill/*.js"
-                    ],
                     "../min/scripts.js": [
                         // "../scripts/methods.js",
                         // "../scripts/vendor/*.js",
@@ -82,19 +85,18 @@ module.exports = function (grunt) {
 
 
         /**
-         * Sass.
+         * Dart Sass.
          *
-         * @link https://github.com/gruntjs/grunt-contrib-sass
+         * @link https://www.npmjs.com/package/grunt-dart-sass
          */
-        sass: {
-            dist: {
+        "dart-sass": {
+            public: {
                 options: {
-                    sourcemap: "auto",
-                    style: "compressed",
-                    update: true
+                    sourceMap: true,
+                    outputStyle: "compressed"
                 },
                 files: {
-                    "../min/styles.css": "../scss/styles.scss"
+                    "../min/styles.css": "../styles/styles.scss"
                 }
             }
         },
@@ -115,7 +117,7 @@ module.exports = function (grunt) {
                     linebreak: true
                 },
                 files: {
-                    src: ["../min/*.css", "../min/*.js"]
+                    src: [ "../min/*.css", "../min/*.js" ]
                 }
             }
         },
@@ -133,17 +135,17 @@ module.exports = function (grunt) {
             },
 
             grunt: {
-                files: ["gruntfile.js"]
+                files: [ "gruntfile.js" ]
             },
 
             scss: {
-                files: ["../scss/**/*.scss"],
-                tasks: ["sass", "usebanner"]
+                files: [ "../styles/**/*.scss" ],
+                tasks: [ "dart-sass", "usebanner" ]
             },
 
             scripts: {
-                files: ["../scripts/**/*.js"],
-                tasks: ["jshint", "uglify", "usebanner"]
+                files: [ "../scripts/**/*.js" ],
+                tasks: [ "jshint", "uglify", "usebanner" ]
             }
         }
     });
@@ -154,8 +156,8 @@ module.exports = function (grunt) {
      */
     grunt.loadNpmTasks("grunt-banner");
     grunt.loadNpmTasks("grunt-contrib-jshint");
-    grunt.loadNpmTasks("grunt-contrib-sass");
-    grunt.loadNpmTasks("grunt-contrib-uglify-es");
+    grunt.loadNpmTasks("grunt-dart-sass");
+    grunt.loadNpmTasks("grunt-contrib-uglify");
     grunt.loadNpmTasks("grunt-contrib-watch");
     grunt.loadNpmTasks("grunt-notify");
 
@@ -163,7 +165,7 @@ module.exports = function (grunt) {
     /**
      * Register task(s).
      */
-    grunt.registerTask("default", ["watch"]);
+    grunt.registerTask("default", [ "watch" ]);
 };
 
 /* <> */

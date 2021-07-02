@@ -1,0 +1,15 @@
+{
+  "dir": "ltr",
+  "lang": "en-CA",
+  "name": "JdmLabs: The Online Laboratory of Jason D. Moss",
+  "short_name": "JdmLabs",
+  "start_url": ".",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "transparent",
+  "description": "The homepage of Jason D. Moss, a PHP + Front-End Developer at JdmLabs, specializing in hand-crafted web solutions. Compliant. Portable. Functional.",
+  "icons": [
+    { "src": "/site-icon-192.png", "type": "image/png", "sizes": "192x192" },
+    { "src": "/site-icon-280.png", "type": "image/png", "sizes": "256x256" }
+  ]
+}

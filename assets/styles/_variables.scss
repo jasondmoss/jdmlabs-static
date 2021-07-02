@@ -1,0 +1,73 @@
+/**
+ * Variables
+ *
+ * @category   Stylesheet
+ * @package    JDMLABS
+ * @author     Jason D. Moss <jason@jdmlabs.com>
+ * @copyright  2005-2019 Jason D. Moss. All rights freely given.
+ * @link       https://www.jdmlabs.com/
+ */
+
+
+:root {
+  --container-max: 1400px;
+
+
+  /**
+   * Fonts
+   * ------------------------------------------------------------------------- *
+   */
+
+  --font-family--base: "Fira Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto;
+  --font-family--accent: "Fira Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto;
+  --font-family--fallback: "Helvetica Neue", Helvetica, Sans-Serif;
+  --font-family: "Fira Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Sans-Serif;
+
+  --font-base: 20px;
+
+
+  /**
+   * Colors
+   * ------------------------------------------------------------------------- *
+   */
+
+  --color--primary: #f2eaf7;
+  --color--secondary: #ded5e3;
+
+  --color--anchor: #d4db00;
+
+  --background--primary: #3d3741;
+  --background--primary-dark: #29252b;
+  --background--primary-darker: #242126;
+  --background--primary-light: #48414D;
+
+  --background--highlight: #fff4b1;
+  --focus-ring: rgba(0, 181, 255, 1);
+
+
+  /**
+   * Debuggin'
+   * ------------------------------------------------------------------------- *
+   */
+
+  --debug-blue: rgba(#006cff, 0.2);
+  --debug-green: rgba(#14ff00, 0.2);
+  --debug-lime: rgba(#c0ff00, 0.4);
+  --debug-orange: rgba(#ff1a00, 0.2);
+  --debug-pink: rgba(#ff00c9, 0.2);
+  --debug-purple: rgba(#ab00ff, 0.2);
+  --debug-red: rgba(#ffcbcb, 0.4);
+  --debug-teal: rgba(#00ffff, 0.2);
+  --debug-yellow: rgba(#faffcb, 0.6);
+}
+
+
+/**
+ * Fade In.
+ */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* <> */

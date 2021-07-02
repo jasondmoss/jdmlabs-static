@@ -1,0 +1,79 @@
+@charset "UTF-8";
+
+/**
+ * Base Layout
+ *
+ * @category   Stylesheet
+ * @package    JDMLABS
+ * @author     Jason D. Moss <jason@jdmlabs.com>
+ * @copyright  2005-2019 Jason D. Moss. All rights freely given.
+ * @link       https://www.jdmlabs.com/
+ */
+
+
+body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  gap: 2rem 0;
+
+  .site--header,
+  .site--primary-image,
+  .site--content,
+  .site--footer {
+    width: 100%;
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+  .site--content {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    transition: padding 0.3s ease;
+  }
+
+
+
+
+  /**
+   * Media Queries.
+   *
+   * ------------------------------------------------------------------------- *
+   */
+
+  @media screen {
+    @media (min-width: 880px) {
+      grid-template-columns: repeat(4, 25%);
+      gap: 0;
+
+      .site--header {
+        grid-column: 1/span 2;
+      }
+
+      .site--primary-image {
+        grid-column: 3/span 2;
+        grid-row: 2;
+        align-self: start;
+      }
+
+      .site--content {
+        grid-column: 1/span 2;
+        grid-row: 2;
+        padding-right: 7.5%;
+      }
+
+      .site--footer {
+        grid-column: 1/span 4;
+        grid-row: 3;
+      }
+    }
+
+    @media (min-width: 1400px) {
+      .site--content {
+        padding-right: 15%;
+      }
+    }
+  }
+}
+
+/* <> */
