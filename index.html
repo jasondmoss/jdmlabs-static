@@ -1,6 +1,7 @@
 <!doctype html>
 <html prefix="article: http://ogp.me/ns/article# vcard: https://www.w3.org/2006/vcard/ns# website: http://ogp.me/ns/website#" lang="en"><head>
 <meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline';">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="all">
 <!--
@@ -17,15 +18,14 @@
 -->
 <title>JdmLabs: The Online Laboratory of Jason D. Moss</title>
 <link rel="canonical" href="https://www.jdmlabs.com/">
-<link rel="icon" href="/favicon.ico" type="image/vnd.microsoft.icon">
-<link rel="icon" href="/site-icon.png" type="image/png">
-<link rel="apple-touch-icon" href="/site-icon-180.png">
-<link rel="manifest" href="/jdmlabs.webmanifest">
-<link rel="stylesheet" href="assets/min/styles.css">
+<link rel="icon" href="https://www.jdmlabs.com/favicon.ico" type="image/vnd.microsoft.icon">
+<link rel="icon" href="https://www.jdmlabs.com/site-icon.png" type="image/png">
+<link rel="apple-touch-icon" href="https://www.jdmlabs.com/site-icon-180.png">
+<link rel="manifest" href="https://www.jdmlabs.com/jdmlabs.webmanifest">
 <link rel="profile" href="https://microformats.org/profile/hcard">
 <link rel="publisher" href="jasondmoss">
-<link rel="preload" href="assets/fonts/fira-sans/fira-sans-v10-latin-400.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="assets/fonts/fira-sans/fira-sans-v10-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" type="font/woff2" href="https://www.jdmlabs.com/assets/fonts/fira-sans/fira-sans-v10-latin-400.woff2" as="font" crossorigin>
+<link rel="stylesheet" href="https://www.jdmlabs.com/assets/min/styles.css">
 <meta name="google-site-verification" content="soTopluLaGz5HhMSAYeRTyz1otHe2MXsIE4pbCz_EqY">
 <meta name="msvalidate.01" content="4275E89FF74F6376A89DE5B5B02531F7">
 <meta name="p:domain_verify" content="1378974f0d1e0c67347f37143ce32aae">
@@ -34,7 +34,7 @@
 <meta name="description" content="The homepage of Jason D. Moss, a PHP + Front-End Developer at JdmLabs, specializing in hand-crafted web solutions. Compliant. Portable. Functional.">
 <meta property="og:title" content="JdmLabs: The Online Laboratory of Jason D. Moss">
 <meta property="og:description" content="The homepage of Jason D. Moss, a PHP + Front-End Developer at JdmLabs, specializing in hand-crafted web solutions. Compliant. Portable. Functional.">
-<meta property="og:image" content="assets/images/mugshot_853.png">
+<meta property="og:image" content="https://www.jdmlabs.com/assets/images/mugshot_853.png">
 <meta property="og:site_name" content="JdmLabs">
 <meta property="og:url" content="https://www.jdmlabs.com/">
 <meta property="og:type" content="website">
@@ -55,10 +55,10 @@
   </span></h1>
 </header>
 <figure itemprop="primaryImageOfPage" itemscope itemtype="https://schema.org/ImageObject" role="group" class="site--primary-image" title="Rugged good looks and boyish grin">
-  <meta itemprop="url" content="https://www.jdmlabs.com/assets/images/ui/mugshot_853.png">
-  <meta itemprop="width" content="853">
-  <meta itemprop="height" content="853">
-  <img itemprop="contentUrl" role="img" src="assets/images/ui/mugshot_853.png" width="853" height="853" alt="Mugshot: Jason D. Moss">
+  <meta itemprop="url" content="https://www.jdmlabs.com/assets/images/ui/mugshot--525.jpg">
+  <meta itemprop="width" content="525">
+  <meta itemprop="height" content="525">
+  <img itemprop="contentUrl" role="img" src="https://www.jdmlabs.com/assets/images/ui/mugshot--525.jpg" srcset="https://www.jdmlabs.com/assets/images/ui/mugshot--525.jpg 525w,https://www.jdmlabs.com/assets/images/ui/mugshot--375.jpg 375w,https://www.jdmlabs.com/assets/images/ui/mugshot--260.jpg 260w" sizes="100vw" width="525" height="525" alt="Mugshot: Jason D. Moss">
 </figure>
 <main itemprop="mainContentOfPage" role="main" id="siteContent" class="site--content">
   <article itemscope itemtype="https://schema.org/Article" role="article" id="siteIntroduction" class="h-entry h-as-article">
@@ -78,7 +78,7 @@
 <footer role="contentinfo" id="siteFooter" class="site--footer">
   <nav itemscope itemtype="https://schema.org/Organization" id="social" class="nav nav--ego">
     <h3 class="nav--title">Social Links</h3>
-    <link itemprop="url" href="https://www.jdmlabs.com">
+    <link itemprop="url" href="https://www.jdmlabs.com/">
     <a itemprop="sameAs" rel="author external me profile" href="https://github.com/jasondmoss" title="GitHub profile"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 16 16" width="32" height="32" role="img" aria-hidden="true" aria-label="Github logo icon"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg> <span>GitHub</span></a>
     <a itemprop="sameAs" rel="author external me profile" href="https://www.behance.net/jasondmoss" title="Behance profile"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 24 24" width="32" height="32" role="img" aria-hidden="true" aria-label="Behance logo icon"><path d="M6.938 4.503c.702 0 1.34.06 1.92.188.577.13 1.07.33 1.485.61.41.28.733.65.96 1.12.225.47.34 1.05.34 1.73 0 .74-.17 1.36-.507 1.86-.338.5-.837.9-1.502 1.22.906.26 1.576.72 2.022 1.37.448.66.665 1.45.665 2.36 0 .75-.13 1.39-.41 1.93-.28.55-.67 1-1.16 1.35-.48.348-1.05.6-1.67.767-.61.165-1.252.254-1.91.254H0V4.51h6.938v-.007zM16.94 16.665c.44.428 1.073.643 1.894.643.59 0 1.1-.148 1.53-.447.424-.29.68-.61.78-.94h2.588c-.403 1.28-1.048 2.2-1.9 2.75-.85.56-1.884.83-3.08.83-.837 0-1.584-.13-2.272-.4-.673-.27-1.24-.65-1.72-1.14-.464-.49-.823-1.08-1.077-1.77-.253-.69-.373-1.45-.373-2.27 0-.803.135-1.54.403-2.23.27-.7.644-1.28 1.12-1.79.495-.51 1.063-.895 1.736-1.194s1.4-.433 2.22-.433c.91 0 1.69.164 2.38.523.67.34 1.22.82 1.66 1.4.44.586.75 1.26.94 2.02.19.75.25 1.54.21 2.38h-7.69c0 .84.28 1.632.71 2.065l-.08.03zm-10.24.05c.317 0 .62-.03.906-.093.29-.06.548-.165.763-.3.21-.135.39-.328.52-.583.13-.24.19-.57.19-.96 0-.75-.22-1.29-.64-1.62-.43-.32-.99-.48-1.69-.48H3.24v4.05H6.7v-.03zm13.607-5.65c-.352-.385-.94-.592-1.657-.592-.468 0-.855.074-1.166.238-.302.15-.55.35-.74.59-.19.24-.317.48-.392.75-.075.26-.12.5-.135.71h4.762c-.07-.75-.33-1.3-.68-1.69v.01zM6.52 10.45c.574 0 1.05-.134 1.425-.412.374-.27.554-.72.554-1.338 0-.344-.07-.625-.18-.846-.13-.22-.3-.39-.5-.512-.21-.124-.45-.21-.72-.257-.27-.053-.56-.074-.84-.074H3.23v3.44h3.29zm9.098-4.958h5.968v1.454h-5.968V5.48v.01z"/></svg> <span>Behance</span></a>
     <a itemprop="sameAs" rel="author external me profile" href="https://twitter.com/jasondmoss" title="Twitter profile"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 310 310" width="32" height="32" role="img" aria-hidden="true" aria-label="Twitter logo icon"><g><path d="M302.973,57.388c-4.87,2.16-9.877,3.983-14.993,5.463c6.057-6.85,10.675-14.91,13.494-23.73 c0.632-1.977-0.023-4.141-1.648-5.434c-1.623-1.294-3.878-1.449-5.665-0.39c-10.865,6.444-22.587,11.075-34.878,13.783 c-12.381-12.098-29.197-18.983-46.581-18.983c-36.695,0-66.549,29.853-66.549,66.547c0,2.89,0.183,5.764,0.545,8.598 C101.163,99.244,58.83,76.863,29.76,41.204c-1.036-1.271-2.632-1.956-4.266-1.825c-1.635,0.128-3.104,1.05-3.93,2.467 c-5.896,10.117-9.013,21.688-9.013,33.461c0,16.035,5.725,31.249,15.838,43.137c-3.075-1.065-6.059-2.396-8.907-3.977 c-1.529-0.851-3.395-0.838-4.914,0.033c-1.52,0.871-2.473,2.473-2.513,4.224c-0.007,0.295-0.007,0.59-0.007,0.889 c0,23.935,12.882,45.484,32.577,57.229c-1.692-0.169-3.383-0.414-5.063-0.735c-1.732-0.331-3.513,0.276-4.681,1.597 c-1.17,1.32-1.557,3.16-1.018,4.84c7.29,22.76,26.059,39.501,48.749,44.605c-18.819,11.787-40.34,17.961-62.932,17.961 c-4.714,0-9.455-0.277-14.095-0.826c-2.305-0.274-4.509,1.087-5.294,3.279c-0.785,2.193,0.047,4.638,2.008,5.895 c29.023,18.609,62.582,28.445,97.047,28.445c67.754,0,110.139-31.95,133.764-58.753c29.46-33.421,46.356-77.658,46.356-121.367 c0-1.826-0.028-3.67-0.084-5.508c11.623-8.757,21.63-19.355,29.773-31.536c1.237-1.85,1.103-4.295-0.33-5.998 C307.394,57.037,305.009,56.486,302.973,57.388z"/></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg> <span>Twitter</span></a>
@@ -89,12 +89,12 @@
   <div itemscope itemtype="https://schema.org/WPFooter" class="site-credits">
     &#169; <span itemprop="copyrightYear">2005</span>-<span itemprop="copyrightYear">2021</span>
     <span itemprop="copyrightHolder name" title="Jason D. Moss, Web Developer Extra(ordinaire)">Jason D. Moss</span>.
-    <span class="rights">All rights freely given [<a itemprop="license" rel="external license" href="/LICENSE" title="MIT License">MIT</a>].</span>
+    <span class="rights">All rights freely given [<a itemprop="license" rel="external license" href="https://www.jdmlabs.com/LICENSE" title="MIT License">MIT</a>].</span>
   </div>
   <meta itemprop="author" content="jasondmoss">
   <meta itemprop="publisher" content="jasondmoss">
   <time itemprop="datePublished" content="2019-10-16T01:37:24.558Z" datetime="2019-10-16T01:37:24.558Z" class="dt-published reader">Tue Oct 15 2019 19:37:07 GMT-0600 (Mountain Daylight Time)</time>
   <time itemprop="dateModified" content="2021-07-02T16:06:11.210Z" datetime="2021-07-02T16:06:11.210Z" class="dt-updated reader">Fri Jul 02 2021 10:06:32 GMT-0600 (Mountain Daylight Time)</time>
 </footer>
-<script src="assets/min/scripts.js"></script>
+<script src="https://www.jdmlabs.com/assets/min/scripts.js"></script>
 </body></html>

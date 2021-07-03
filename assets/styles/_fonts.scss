@@ -21,9 +21,10 @@
   font-family: "Fira Sans";
   font-style: normal;
   font-weight: 400;
+  font-display: swap;
   src: local("Fira Sans Regular"), local("FiraSans-Regular"),
-    url("../fonts/fira-sans/fira-sans-v10-latin-regular.woff2") format("woff2"),
-    url("../fonts/fira-sans/fira-sans-v10-latin-regular.woff") format("woff");
+    url("../fonts/fira-sans/fira-sans-v10-latin-400.woff2") format("woff2"),
+    url("../fonts/fira-sans/fira-sans-v10-latin-400.woff") format("woff");
 }
 
 /*@font-face {
