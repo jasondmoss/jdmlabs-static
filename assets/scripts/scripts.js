@@ -1,15 +1,16 @@
-// jshint esversion: 9
-
 /**
- * Site Scripts.
- *
- * @category   JavaScript
- * @package    JDMLABS
- * @author     Jason D. Moss <jason@jdmlabs.com>
- * @copyright  2005-2019 Jason D. Moss. All rights freely given.
- * @link       https://www.jdmlabs.com/
+ * jdmlabs v13.0.23
+ * The homepage of Jason D. Moss, a PHP + Front-End Developer at JdmLabs, specializing in hand-crafted web solutions. Compliant. Portable. Functional.
+
+ * Package    JDMLABS
+ * Version    13.0.23
+ * Author     Jason D. Moss <jason@jdmlabs.com>
+ * Copyright  2005-2022 Jason D. Moss. All rights freely given.
+ * License    MIT License
+ * Link       https://www.jdmlabs.com/
  */
 
+// jshint esversion: 9
 
 /**
  * Has (Object|Node) been defined? Does (Object|Node) exist?

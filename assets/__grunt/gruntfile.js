@@ -20,18 +20,15 @@ module.exports = (grunt) => {
          */
         fileBanner:
             "/**\n" +
-            " * <%= pkg.name %> v<%= pkg.version %> [<%= grunt.template.today(\"yyyy-mm-dd\") %>]\n" +
-            " *\n" +
-            " * <%= pkg.description %>\n" +
-            " *\n" +
+            " * <%= pkg.name %> v<%= pkg.version %>\n" +
+            " * <%= pkg.description %>\n\n" +
             " * Package    <%= pkg.package %>\n" +
-            " * Subpackage <%= pkg.subPackage %>\n" +
             " * Version    <%= pkg.version %>\n" +
             " * Author     <%= pkg.author.name %> <<%= pkg.author.email %>>\n" +
             " * Copyright  <%= pkg.copyright %>\n" +
             " * License    <%= pkg.license %> License\n" +
             " * Link       <%= pkg.homepage %>\n" +
-            " */\n\n",
+            " */\n",
 
 
         /**
@@ -44,42 +41,12 @@ module.exports = (grunt) => {
             options: {
                 jshintrc: true,
                 globals: {
-                    window: false,
-                    document: false,
+                    window: true,
+                    document: true,
                     $: false,
                     jQuery: false
                 },
                 validthis: true
-            }
-        },
-
-
-        /**
-         * Script files validation/minification.
-         *
-         * @link https://github.com/gruntjs/grunt-contrib-uglify
-         */
-        uglify: {
-            options: {
-                mangle: false,
-                compress: true,
-                sourceMap: true,
-                sourceMapName: "../min/jdmlabs.js.map",
-                output: {
-                    comments: false,
-                    quote_style: 2
-                }
-            },
-
-            public: {
-                files: {
-                    "../min/scripts.js": [
-                        // "../scripts/methods.js",
-                        // "../scripts/vendor/*.js",
-                        // "../scripts/component/*.js",
-                        "../scripts/scripts.js"
-                    ]
-                }
             }
         },
 
@@ -92,11 +59,11 @@ module.exports = (grunt) => {
         "dart-sass": {
             public: {
                 options: {
-                    sourceMap: true,
+                    sourceMap: false,
                     outputStyle: "compressed"
                 },
                 files: {
-                    "../min/styles.css": "../styles/styles.scss"
+                    "../css/styles.css": "../styles/styles.scss"
                 }
             }
         },
@@ -117,7 +84,7 @@ module.exports = (grunt) => {
                     linebreak: true
                 },
                 files: {
-                    src: [ "../min/*.css", "../min/*.js" ]
+                    src: [ "../css/styles.css", "../scripts/scripts.js" ]
                 }
             }
         },
@@ -140,13 +107,18 @@ module.exports = (grunt) => {
 
             scss: {
                 files: [ "../styles/**/*.scss" ],
-                tasks: [ "dart-sass", "usebanner" ]
+                tasks: [ "dart-sass" ]
             },
 
             scripts: {
-                files: [ "../scripts/**/*.js" ],
-                tasks: [ "jshint", "uglify", "usebanner" ]
-            }
+                files: [ "../scripts/scripts.js" ],
+                tasks: [ "jshint" ]
+            },
+
+            banner: {
+                files: [ "../css/styles.css", "../scripts/scripts.js" ],
+                tasks: [ "usebanner" ]
+            },
         }
     });
 
@@ -157,7 +129,6 @@ module.exports = (grunt) => {
     grunt.loadNpmTasks("grunt-banner");
     grunt.loadNpmTasks("grunt-contrib-jshint");
     grunt.loadNpmTasks("grunt-dart-sass");
-    grunt.loadNpmTasks("grunt-contrib-uglify");
     grunt.loadNpmTasks("grunt-contrib-watch");
     grunt.loadNpmTasks("grunt-notify");
 

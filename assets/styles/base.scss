@@ -6,7 +6,7 @@
  * @category   Stylesheet
  * @package    JDMLABS
  * @author     Jason D. Moss <jason@jdmlabs.com>
- * @copyright  2005-2019 Jason D. Moss. All rights freely given.
+ * @copyright  2005-2022 Jason D. Moss. All rights freely given.
  * @link       https://www.jdmlabs.com/
  */
 
@@ -63,9 +63,6 @@ html {
   font-family: var(--font-family--base);
   font-size: var(--font-base);
   line-height: 1.5;
-
-  -ms-overflow-style: scrollbar;
-  -webkit-tap-highlight-color: rgba(#000, 0);
 }
 
 body {
