@@ -59,6 +59,21 @@
     border: 0;
     border-bottom: 0.25rem solid var(--background--primary-light);
   }
+
+  .sidenote {
+    display: block;
+    margin-top: 4rem;
+    font-size: 0.8rem;
+
+    strong {
+      margin-right: 1rem;
+      text-decoration: underline;
+    }
+
+    span {
+      font-style: italic;
+    }
+  }
 }
 
 
