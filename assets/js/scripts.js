@@ -1,47 +1,46 @@
 /**
- * jdmlabs v13.0.23
- * The homepage of Jason D. Moss, a PHP + Front-End Developer at JdmLabs, specializing in hand-crafted web solutions. Compliant. Portable. Functional.
-
- * Package    JDMLABS
- * Version    13.0.23
- * Author     Jason D. Moss <jason@jdmlabs.com>
- * Copyright  2005-2022 Jason D. Moss. All rights freely given.
- * License    MIT License
- * Link       https://www.jdmlabs.com/
+ * The homepage of Jason D. Moss, a PHP + Front-End Developer at JdmLabs,
+ * specializing in hand-crafted web solutions.
+ * Compliant. Portable. Functional.
+ *
+ * @package JDMLABS
+ * @author Jason D. Moss <jason@jdmlabs.com>
+ * @copyright 2005-2025 Jason D. Moss. All rights freely given.
+ * @license MIT License
+ * @link https://www.jdmlabs.com/
  */
 
-// jshint esversion: 9
 
 /**
- * Has (Object|Node) been defined? Does (Object|Node) exist?
+ * Has (Object|Node|Whatever) been defined? Does (Object|Node|Whatever) exist?
  *
- * @param {NodeElement} thing Element to test.
- *
- * @return {Boolean} True or false
- * @method exists
+ * @param {object|array|string} thing
  */
-function exists(thing)
-{
+const exists = (thing) => {
     "use strict";
 
-    if (typeof thing === "undefined" || thing === null || thing === false || thing.length < 1) {
-        return false;
-    }
-
-    return true;
-}
+    return ! (
+        typeof thing === "undefined" ||
+        thing === null ||
+        thing === false ||
+        thing.length < 1
+    );
+};
 
 
 /**
  * Securely open a new window from given anchor element.
  *
- * @param {NodeElement} anchor
+ * @param {Node} anchor
  *
  * @method newWindowAnchor
  */
-function newWindowAnchor(anchor)
-{
+const newWindowAnchor = (anchor) => {
     "use strict";
+
+    if (! exists(anchor)) {
+        return false;
+    }
 
     anchor.setAttribute("rel", "noopener noreferrer");
     anchor.addEventListener("click", (event) => {
@@ -57,7 +56,7 @@ function newWindowAnchor(anchor)
          */
         newWindow.opener = null;
     });
-}
+};
 
 
 (() => {
@@ -74,7 +73,7 @@ function newWindowAnchor(anchor)
             const href = link.getAttribute("href");
             const rel = link.getAttribute("rel");
 
-            if (!exists(href)) {
+            if (! exists(href)) {
                 return false;
             }
 
@@ -83,10 +82,10 @@ function newWindowAnchor(anchor)
              *
              * @type {Boolean}
              */
-            let isExternal = !(
-                href.startsWith("/") || href.startsWith("?") || href.startsWith("#") ||
-                href.includes("jdmlabs.com")
-            ) ||
+            let isExternal = ! (
+                    href.startsWith("/") || href.startsWith("?") || href.startsWith("#") ||
+                    href.includes("jdmlabs.com")
+                ) ||
                 // Flagged as external.
                 (exists(rel) ? rel.includes("external") : false);
 
