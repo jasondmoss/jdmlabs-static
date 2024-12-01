@@ -7,19 +7,38 @@
  */
 
 @font-face {
+  font-family: "Berkeley Mono";
+  font-style: normal;
+  font-weight: 125 950;
+  font-stretch: 75% 125%;
+  font-display: swap;
+  src: local("Berkeley Mono"), url("../fonts/berkeley-mono/berkeley-mono-variable.woff2") format("woff2-variations");
+}
+
+@font-face {
   font-family: "Fira Sans";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src:
-    local("Fira Sans"),
-    url("../fonts/fira-sans/fira-sans-v10-latin-400.woff2") format("woff2");
+  src: local("Fira Sans"), url("../fonts/fira-sans/fira-sans-v10-latin-400.woff2") format("woff2");
 }
 
 :root {
   --container-max: 2000px;
 
+  --fluid-body-x: clamp(0.625rem, 0.3869rem + 1.1905vw, 1.875rem);
+  --fluid-body-y: clamp(1.875rem, 1.0417rem + 4.1667vw, 6.25rem);
+
+  --fluid-logo: clamp(2.5rem, 2.1429rem + 1.7857vw, 4.375rem);
+
+  --fluid-h1: clamp(2.5rem, 2.1429rem + 1.7857vw, 4.375rem);
+  --fluid-h2: clamp(1.875rem, 1.6964rem + 0.8929vw, 2.8125rem);
+  --fluid-h3: clamp(1.5rem, 1.4286rem + 0.3571vw, 1.875rem);
+  --fluid-h4: clamp(1.25rem, 1.1905rem + 0.2976vw, 1.5625rem);
+  --fluid-p: clamp(1.125rem, 1.0774rem + 0.2381vw, 1.375rem);
+
   --font-family: "Fira Sans";
+  --font-family-alt: "Berkeley Mono";
   --font-base: 20px;
 
   --color--primary: hsl(277 44.8% 94.3%);
@@ -56,7 +75,9 @@
   --debug-yellow: hsla(66 100% 89.8% / 60%);
 }
 
+
 /** -- Base/Reset */
+
 * {
   width: auto;
   height: auto;
@@ -65,19 +86,11 @@
   border: 0;
   vertical-align: baseline;
   text-decoration: none;
-  line-height: 1.75;
+  line-height: 1.4;
 }
 
 *, *::before, *::after {
   box-sizing: border-box;
-}
-
-main {
-  display: inline;
-}
-
-a, hr, img {
-  display: inline-block;
 }
 
 html, body {
@@ -87,8 +100,7 @@ html, body {
 }
 
 html {
-  overflow-x: hidden;
-  flex-direction: column;
+  width: 100%;
   height: 100%;
   background-color: var(--background--primary);
   font-style: normal;
@@ -99,13 +111,13 @@ html {
 
 body {
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto;
+  grid-template-columns: calc(100% - var(--fluid-body-x));
   gap: 2rem 0;
   max-width: var(--container-max);
   height: 100%;
   margin-inline: auto;
-  padding-block-start: clamp(1rem, 3.75vh, 6rem);
+  padding-block-start: var(--fluid-body-y);
+  padding-inline: var(--fluid-body-x);
   background-color: transparent;
   font-size: 1rem;
   color: var(--color--primary);
@@ -114,6 +126,10 @@ body {
   animation-fill-mode: both;
   animation-delay: 0.15s;
   animation-name: fadeIn;
+}
+
+main {
+  display: inline;
 }
 
 img {
@@ -137,7 +153,7 @@ h1, h2, h3, h4 {
 
 h1 {
   margin: 0;
-  font-size: clamp(1.75rem, 3vw, 4rem);
+  font-size: var(--fluid-h1);
 }
 
 h2, h3, h4 {
@@ -145,20 +161,24 @@ h2, h3, h4 {
 }
 
 h2 {
-  font-size: clamp(1.75rem, 2vw, 2.5rem);
+  font-size: var(--fluid-h2);
 }
 
 h3 {
-  font-size: clamp(1.35rem, 2vw, 2.25rem);
+  font-size: var(--fluid-h3);
 }
 
 h4 {
-  font-size: clamp(1.2rem, 2vw, 2rem);
+  font-size: var(--fluid-h4);
 }
 
 p {
   margin: 0 0 1rem;
-  font-size: clamp(1rem, 2vw, 1.25rem);
+  font-size: var(--fluid-p);
+}
+
+a, hr {
+  display: inline-block;
 }
 
 a, a:link, a:visited {
@@ -187,10 +207,11 @@ strong {
 .site--content,
 .site--footer {
   width: 100%;
-  padding-inline: 1rem;
 }
 
+
 /** -- Site Header. */
+
 .site--header .nameplate .u-url {
   display: flex;
   align-items: center;
@@ -207,7 +228,7 @@ strong {
 }
 
 .site--header .nameplate .u-logo {
-  width: clamp(2rem, 3vw, 4rem);
+  width: var(--fluid-logo);
   fill: var(--fill-logo);
   transition-duration: 1.5s;
   transition-property: transform;
@@ -222,7 +243,9 @@ strong {
   width: 100%;
 }
 
+
 /** -- Site Footer. */
+
 .site--footer {
   display: flex;
   flex-flow: row wrap;
@@ -236,8 +259,14 @@ strong {
   display: inline-block;
   width: 100%;
   padding-block-end: 0.5rem;
+  padding-inline: 1rem;
   text-align: center;
-  font-size: clamp(0.75rem, 1.5vw, 1.15rem);
+  font-size: clamp(0.75rem, 0.75vw, 1.15rem);
+  transition: margin-inline-end 0.3s ease-in-out;
+}
+
+.site--footer .site-credits .rights > span {
+  display: inline-block;
 }
 
 .site--footer .site-credits a,
@@ -273,6 +302,7 @@ strong {
   justify-content: flex-start;
   gap: 0 0.5rem;
   padding: 0.25rem 1rem;
+  font-family: var(--font-family-alt), "Lucida Console", "Courier New", monospace;
   font-size: clamp(0.85rem, 3vw, 1rem);
   transition:
     background-color 0.3s ease-in-out,
@@ -315,10 +345,12 @@ strong {
   transform: translateX(-0.15rem) scale(1.5);
 }
 
+
 /** -- Mugshot. */
+
 .site--primary-image {
   display: flex;
-  align-self: end;
+  align-content: center;
   justify-content: center;
   transition: margin-inline-start 0.3s ease-in-out;
 }
@@ -334,7 +366,9 @@ strong {
   transition: transform 0.175s ease-in-out;
 }
 
+
 /** -- Main Content. */
+
 .site--content {
   padding-block: 2rem;
   transition: padding 0.3s ease;
@@ -371,21 +405,6 @@ strong {
   border-bottom: 0.25rem solid var(--background--primary-light);
 }
 
-/*.site--content .sidenote {
-  display: block;
-  margin-block-start: 4rem;
-  font-size: 0.8rem;
-}
-
-.site--content .sidenote strong {
-  margin-inline-end: 1rem;
-  text-decoration: underline;
-}
-
-.site--content .sidenote span {
-  font-style: italic;
-}*/
-
 @media screen {
   @media (min-width: 550px) {
     .site--content hr {
@@ -397,6 +416,7 @@ strong {
   @media (min-width: 880px) {
     html {
       background-color: var(--background--primary);
+
       /* Diagonal stripes. */
       background-image: repeating-linear-gradient(-45deg, var(--background--primary-darker) 0 6px, transparent 6px 12px),
       linear-gradient(to right, var(--background--primary) 0% 60%, var(--background--primary-dark) 60% 100%);
@@ -422,6 +442,7 @@ strong {
       grid-column: 2;
       grid-row: 2;
       align-self: start;
+      padding-inline: 1rem;
     }
 
     .site--footer {
@@ -472,21 +493,23 @@ strong {
     }
   }
 
-  @media (min-width: 2000px) {
-    .site--primary-image,
-    .site--footer .site-credits {
-      margin-inline-start: 5%;
-      padding-inline: 0;
-    }
-  }
-
-  @media (min-width: 2200px) {
+  @media (min-width: 3000px) {
     .site--primary-image {
       margin-inline-start: 10%;
     }
 
     .site--footer .site-credits {
       margin-inline-end: -5%;
+    }
+  }
+
+  @media (min-width: 3780px) {
+    .site--primary-image {
+      margin-inline-start: 20%;
+    }
+
+    .site--footer .site-credits {
+      margin-inline-end: -10%;
     }
   }
 }
